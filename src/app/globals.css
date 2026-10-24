@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Extracted directly from LRS.png Brand Asset */
+  --brand-primary: #0B5C70;        /* Deep Petrol Teal ("LRS" wordmark & inner globe arc) */
+  --brand-primary-dark: #084554;   /* Hover / Active Petrol */
+  --brand-primary-deep: #052C36;   /* Hero & Footer Deep Architectural Backdrop */
+  --brand-secondary: #10A5AC;      /* Vibrant Turquoise / Aqua ("LEGAL & RELOCATION SERVICES" & outer arcs) */
+  --brand-secondary-light: #E6F6F7;/* Subtle Aqua Tint for tags & active states */
+  --brand-surface: #FFFFFF;        /* Pure White Primary Background */
+  --brand-surface-muted: #F6F9FA;  /* Refined Alabaster-Teal Secondary Surface */
+  --brand-border: #DCE6E9;         /* Hairline Architectural Border */
+  --brand-ink: #091E24;            /* Primary Editorial Text */
+  --brand-slate: #4A636A;          /* Secondary Supporting Body Copy */
+}
+
+html {
+  background-color: #FFFFFF;
+  color: var(--brand-ink);
+  scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: var(--brand-ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Malayalam Script Typographic Tuning */
+html[lang="ml"] body {
+  font-family: var(--font-malayalam), var(--font-sans), sans-serif;
+  line-height: 1.75;
+}
+
+html[lang="ml"] h1,
+html[lang="ml"] h2,
+html[lang="ml"] h3 {
+  line-height: 1.38;
+  letter-spacing: -0.01em;
+}
+
+/* Refined Navigation Underline */
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--brand-secondary);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-link-underline:hover::after,
+.nav-link-underline[data-active="true"]::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+/* Accessible Focus States */
+:focus-visible {
+  outline: 2px solid var(--brand-secondary);
+  outline-offset: 3px;
+}

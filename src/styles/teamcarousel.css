@@ -1,0 +1,23 @@
+
+/* Team Slider */
+.team-slider .team-pagination {
+  position: relative;
+  width: auto;
+}
+
+.team-slider .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin: 0 !important;
+  border-radius: 9999px;
+  background: var(--color-brand-primary, #1c3557);
+  opacity: 0.25;
+  transition:
+    width 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.team-slider .swiper-pagination-bullet-active {
+  width: 26px;
+  opacity: 1;
+}
