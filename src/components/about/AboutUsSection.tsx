@@ -92,19 +92,6 @@ export function AboutUsSection() {
               </div>
             </div>
 
-            {/* Transparent Editorial Placeholder Notice */}
-            {/* <div
-              data-animate="fade-up"
-              className="bg-brand-secondary-light/60 border-l-2 border-brand-secondary p-4 mb-9"
-            >
-              <span className="block text-[10px] font-semibold uppercase tracking-widest text-brand-primary mb-1">
-                {t.aboutPage.overview.editorialNoteBadge}
-              </span>
-              <p className="text-xs text-brand-slate leading-relaxed">
-                {t.aboutPage.overview.editorialNoteText}
-              </p>
-            </div> */}
-
             {/* CTAs */}
             <div
               data-animate="fade-up"
@@ -118,7 +105,7 @@ export function AboutUsSection() {
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/#services"
+                href="/services"
                 className="inline-flex items-center gap-3 border border-brand-border hover:border-brand-primary text-brand-ink hover:text-brand-primary text-xs font-semibold uppercase tracking-[0.16em] px-7 py-4 transition-colors duration-300"
               >
                 <span>{t.aboutPage.overview.secondaryCta}</span>

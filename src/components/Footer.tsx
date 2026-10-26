@@ -2,9 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Linkedin, Globe, Mail, Phone, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
-import { SERVICES_DATA } from "@/data/siteContent";
+import { MALTA_SERVICES_DATA } from "@/data/services";
 
 export function Footer() {
   const { locale, t } = useLanguage();
@@ -48,7 +49,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/15">
           {/* Column 1: Brand Identity */}
           <div className="lg:col-span-4">
-            <a href="#home" className="inline-block mb-6">
+            <Link href="/" className="inline-block mb-6">
               <Image
                 src="/images/lrs-logo-light.png"
                 alt="LRS — Legal & Relocation Services"
@@ -56,27 +57,27 @@ export function Footer() {
                 height={76}
                 className="h-12 w-auto object-contain"
               />
-            </a>
+            </Link>
             <p className="text-sm text-white/75 leading-relaxed mb-6 max-w-sm">
               {t.footer.brandStatement}
             </p>
             <div className="flex items-center gap-3">
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 aria-label="LinkedIn Placeholder"
                 className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-brand-secondary transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
-              </a>
-              <a
-                href="#contact"
-                aria-label="Global Network Placeholder"
+              </Link>
+              <Link
+                href="/services"
+                aria-label="Global Network"
                 className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-brand-secondary transition-colors"
               >
                 <Globe className="w-4 h-4" />
-              </a>
+              </Link>
               <a
-                href="#contact"
+                href="mailto:info@lrs-global.com"
                 aria-label="Email Advisory Desk"
                 className="w-9 h-9 border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-brand-secondary transition-colors"
               >
@@ -92,47 +93,47 @@ export function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-white/80">
               <li>
-                <a href="#home" className="hover:text-brand-secondary transition-colors">
+                <Link href="/" className="hover:text-brand-secondary transition-colors">
                   {t.nav.home}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-brand-secondary transition-colors">
+                <Link href="/about" className="hover:text-brand-secondary transition-colors">
                   {t.nav.about}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-brand-secondary transition-colors">
+                <Link href="/services" className="hover:text-brand-secondary transition-colors">
                   {t.nav.services}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#team" className="hover:text-brand-secondary transition-colors">
+                <Link href="/#team" className="hover:text-brand-secondary transition-colors">
                   {t.nav.team}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="hover:text-brand-secondary transition-colors">
+                <Link href="/contact" className="hover:text-brand-secondary transition-colors">
                   {t.nav.contact}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Practice Areas */}
+          {/* Column 3: Practice Areas / Malta Programmes */}
           <div className="lg:col-span-3">
             <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-secondary mb-5">
               {t.footer.practiceHeading}
             </h3>
             <ul className="space-y-3 text-sm text-white/80">
-              {SERVICES_DATA.slice(0, 4).map((service) => (
+              {MALTA_SERVICES_DATA.map((service) => (
                 <li key={service.id}>
-                  <a
-                    href="#services"
+                  <Link
+                    href={`/services/${service.slug}`}
                     className="hover:text-brand-secondary transition-colors inline-flex items-center gap-1.5"
                   >
                     <span>{service.title[locale]}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -152,20 +153,30 @@ export function Footer() {
               </p>
               <p className="flex items-center gap-2 text-xs">
                 <Mail className="w-3.5 h-3.5 text-brand-secondary shrink-0" />
-                <span>{t.contact.emailValue}</span>
+                <a
+                  href={`mailto:${t.contact.emailValue}`}
+                  className="hover:text-brand-secondary transition-colors"
+                >
+                  {t.contact.emailValue}
+                </a>
               </p>
               <p className="flex items-center gap-2 text-xs">
                 <Phone className="w-3.5 h-3.5 text-brand-secondary shrink-0" />
-                <span>{t.contact.phoneValue}</span>
+                <a
+                  href={`tel:${t.contact.phoneValue.replace(/\s+/g, "")}`}
+                  className="hover:text-brand-secondary transition-colors"
+                >
+                  {t.contact.phoneValue}
+                </a>
               </p>
               <div className="pt-2">
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-secondary hover:text-white transition-colors"
                 >
                   <span>{t.nav.inquireCta}</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -175,17 +186,14 @@ export function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-white/60">
           <p>{t.footer.copyright}</p>
           <div className="flex items-center gap-6">
-            <a href="#contact" className="hover:text-white transition-colors">
+            <Link href="/contact" className="hover:text-white transition-colors">
               {t.footer.privacyPolicy}
-            </a>
-            <a href="#contact" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/contact" className="hover:text-white transition-colors">
               {t.footer.termsOfEngagement}
-            </a>
+            </Link>
           </div>
         </div>
-        {/* <p className="mt-4 text-[11px] text-white/45 leading-relaxed">
-          {t.footer.disclaimer}
-        </p> */}
       </div>
     </footer>
   );

@@ -13,6 +13,7 @@ export function Navbar() {
   const { t } = useLanguage();
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const isContactPage = pathname === "/contact";
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -38,17 +39,17 @@ export function Navbar() {
     },
     {
       label: t.nav.services,
-      href: isHomePage ? "#services" : "/#services",
-      active: false,
+      href: "/services",
+      active: pathname === "/services" || pathname.startsWith("/services/"),
     },
     {
       label: t.nav.contact,
-      href: isHomePage ? "#contact" : "/#contact",
-      active: false,
+      href: "/contact",
+      active: isContactPage,
     },
   ];
 
-  const inquiryHref = isHomePage ? "#contact" : "/#contact";
+  const inquiryHref = isContactPage ? "#contact-form" : "/contact";
 
   return (
     <>
@@ -85,6 +86,7 @@ export function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
+                aria-current={item.active ? "page" : undefined}
                 data-active={item.active ? "true" : undefined}
                 className={`nav-link-underline text-xs font-semibold uppercase tracking-[0.16em] transition-colors ${
                   isScrolled

@@ -2,13 +2,14 @@
 
 import React, { useRef, useEffect, useCallback, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Keyboard, A11y } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import { ArrowUpRight, ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import "swiper/css";
 
-import { SERVICES_DATA } from "@/data/siteContent";
+import { MALTA_SERVICES_DATA } from "@/data/services";
 import { useLanguage } from "@/context/LanguageContext";
 import { createSectionReveal, prefersReducedMotion } from "@/lib/animations";
 
@@ -37,7 +38,6 @@ export function ServicesCarousel() {
 
     if (!cards.length) return;
 
-    // 1. Reset inline heights so natural content height can be measured accurately
     slides.forEach((slide) => {
       slide.style.height = "auto";
     });
@@ -45,7 +45,6 @@ export function ServicesCarousel() {
       card.style.height = "auto";
     });
 
-    // 2. Measure the tallest card across the entire carousel
     let maxHeight = 0;
     cards.forEach((card) => {
       const naturalHeight = Math.ceil(card.getBoundingClientRect().height);
@@ -54,7 +53,6 @@ export function ServicesCarousel() {
       }
     });
 
-    // 3. Apply the calculated maximum height to all slides and cards
     if (maxHeight > 0) {
       const heightPx = `${maxHeight}px`;
       slides.forEach((slide) => {
@@ -72,8 +70,6 @@ export function ServicesCarousel() {
     createSectionReveal(sectionRef.current);
   }, []);
 
-  // Re-calculate equal heights on mount, locale change (English <-> Malayalam),
-  // font load, and viewport resize.
   useEffect(() => {
     const rafId = window.requestAnimationFrame(() => {
       equalizeSlideHeights();
@@ -135,14 +131,11 @@ export function ServicesCarousel() {
             </p>
           </div>
 
-          {/* Carousel Controls & Editable Badge */}
+          {/* Carousel Controls */}
           <div
             data-animate="fade-up"
             className="flex flex-col sm:flex-row sm:items-center gap-4"
           >
-            {/* <span className="inline-flex items-center px-3 py-1.5 text-[11px] font-semibold uppercase tracking-widest bg-brand-secondary-light text-brand-primary border border-brand-secondary/30">
-              {t.services.sampleNotice}
-            </span> */}
             <div className="flex items-center gap-2">
               <button
                 type="button"
@@ -197,7 +190,7 @@ export function ServicesCarousel() {
             onSlideChangeTransitionEnd={() => equalizeSlideHeights()}
             className="!overflow-visible"
           >
-            {SERVICES_DATA.map((service) => (
+            {MALTA_SERVICES_DATA.map((service) => (
               <SwiperSlide
                 key={service.id}
                 style={
@@ -215,7 +208,10 @@ export function ServicesCarousel() {
                 >
                   <div>
                     {/* Service Visual */}
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-primary-deep">
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="block relative aspect-[4/3] w-full overflow-hidden bg-brand-primary-deep"
+                    >
                       <Image
                         src={service.image}
                         alt={service.imageAlt[locale]}
@@ -227,7 +223,7 @@ export function ServicesCarousel() {
                       <div className="absolute top-3 left-3 bg-brand-primary-deep/90 text-white text-[11px] font-mono px-2.5 py-1 tracking-widest">
                         {service.code}
                       </div>
-                    </div>
+                    </Link>
 
                     {/* Service Body */}
                     <div className="p-6 sm:p-7">
@@ -235,20 +231,22 @@ export function ServicesCarousel() {
                         {service.category[locale]}
                       </p>
                       <h3 className="font-display text-2xl text-brand-ink leading-snug mb-3 group-hover:text-brand-primary transition-colors">
-                        {service.title[locale]}
+                        <Link href={`/services/${service.slug}`}>
+                          {service.title[locale]}
+                        </Link>
                       </h3>
                       <p className="text-sm text-brand-slate leading-relaxed mb-5">
-                        {service.description[locale]}
+                        {service.shortDescription[locale]}
                       </p>
 
                       <ul className="space-y-2 border-t border-brand-border pt-4">
-                        {service.deliverables[locale].map((item) => (
+                        {service.highlights.slice(0, 3).map((item) => (
                           <li
-                            key={item}
-                            className="flex items-center gap-2 text-xs text-brand-ink/85"
+                            key={item.label.en}
+                            className="flex items-start gap-2 text-xs text-brand-ink/85"
                           >
-                            <CheckCircle2 className="w-3.5 h-3.5 text-brand-secondary shrink-0" />
-                            <span>{item}</span>
+                            <CheckCircle2 className="w-3.5 h-3.5 text-brand-secondary shrink-0 mt-0.5" />
+                            <span>{item.value[locale]}</span>
                           </li>
                         ))}
                       </ul>
@@ -257,13 +255,13 @@ export function ServicesCarousel() {
 
                   {/* Card Footer Link */}
                   <div className="px-6 sm:px-7 pb-6 pt-2 mt-auto">
-                    <a
-                      href="#contact"
+                    <Link
+                      href={`/services/${service.slug}`}
                       className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-brand-primary group-hover:text-brand-secondary transition-colors"
                     >
                       <span>{t.services.exploreLink}</span>
                       <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </a>
+                    </Link>
                   </div>
                 </article>
               </SwiperSlide>
@@ -279,13 +277,13 @@ export function ServicesCarousel() {
           <p className="text-xs uppercase tracking-widest text-brand-slate">
             LRS — LEGAL & RELOCATION SERVICES
           </p>
-          <a
-            href="#contact"
+          <Link
+            href="/services"
             className="inline-flex items-center gap-3 bg-brand-primary hover:bg-brand-secondary text-white text-xs font-semibold uppercase tracking-[0.16em] px-7 py-4 transition-colors"
           >
             <span>{t.services.viewAllCta}</span>
             <ArrowUpRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

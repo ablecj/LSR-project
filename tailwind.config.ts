@@ -5,6 +5,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/providers/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -23,16 +24,16 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "var(--font-malayalam)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "var(--font-malayalam)", "system-ui", "sans-serif"],
-        malayalam: ["var(--font-malayalam)", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        malayalam: ["var(--font-malayalam)", "var(--font-sans)", "sans-serif"],
       },
       maxWidth: {
         editorial: "1360px",
       },
       boxShadow: {
-        subtle: "0 12px 36px -12px rgba(11, 92, 112, 0.08)",
-        elevated: "0 20px 48px -16px rgba(7, 59, 72, 0.16)",
+        subtle: "0 10px 30px -12px rgba(5, 44, 54, 0.07)",
+        elevated: "0 20px 45px -15px rgba(5, 44, 54, 0.14)",
       },
     },
   },

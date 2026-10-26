@@ -2,6 +2,8 @@
 
 import React, { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { X, ArrowUpRight, Globe } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -12,6 +14,9 @@ interface MobileNavigationProps {
 
 export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
   const { locale, setLocale, t } = useLanguage();
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+  const isContactPage = pathname === "/contact";
 
   useEffect(() => {
     if (isOpen) {
@@ -27,11 +32,36 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
   if (!isOpen) return null;
 
   const navItems = [
-    { label: t.nav.home, href: "#home", num: "01" },
-    { label: t.nav.about, href: "#about", num: "02" },
-    { label: t.nav.services, href: "#services", num: "03" },
-    { label: t.nav.team, href: "#team", num: "04" },
-    { label: t.nav.contact, href: "#contact", num: "05" },
+    {
+      label: t.nav.home,
+      href: isHomePage ? "#home" : "/",
+      num: "01",
+      active: pathname === "/",
+    },
+    {
+      label: t.nav.about,
+      href: "/about",
+      num: "02",
+      active: pathname === "/about",
+    },
+    {
+      label: t.nav.services,
+      href: "/services",
+      num: "03",
+      active: pathname === "/services" || pathname.startsWith("/services/"),
+    },
+    {
+      label: t.nav.team,
+      href: isHomePage ? "#team" : "/#team",
+      num: "04",
+      active: false,
+    },
+    {
+      label: t.nav.contact,
+      href: "/contact",
+      num: "05",
+      active: isContactPage,
+    },
   ];
 
   return (
@@ -42,7 +72,11 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
       className="fixed inset-0 z-50 bg-brand-primary-deep text-white flex flex-col justify-between p-6 sm:p-10 transition-opacity duration-300"
     >
       <div className="flex items-center justify-between border-b border-white/15 pb-5">
-        <a href="#home" onClick={onClose} className="inline-flex items-center">
+        <Link
+          href={isHomePage ? "#home" : "/"}
+          onClick={onClose}
+          className="inline-flex items-center"
+        >
           <Image
             src="/images/lrs-logo-light.png"
             alt="LRS — Legal & Relocation Services"
@@ -50,7 +84,7 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
             height={64}
             className="h-10 w-auto object-contain"
           />
-        </a>
+        </Link>
         <button
           type="button"
           onClick={onClose}
@@ -64,11 +98,16 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
       <nav className="my-auto py-8">
         <ul className="space-y-5">
           {navItems.map((item) => (
-            <li key={item.href} className="border-b border-white/10 pb-4">
-              <a
+            <li key={item.num} className="border-b border-white/10 pb-4">
+              <Link
                 href={item.href}
                 onClick={onClose}
-                className="group flex items-baseline justify-between text-2xl sm:text-3xl font-display tracking-tight text-white hover:text-brand-secondary transition-colors"
+                aria-current={item.active ? "page" : undefined}
+                className={`group flex items-baseline justify-between text-2xl sm:text-3xl font-display tracking-tight transition-colors ${
+                  item.active
+                    ? "text-brand-secondary"
+                    : "text-white hover:text-brand-secondary"
+                }`}
               >
                 <span className="inline-flex items-baseline gap-4">
                   <span className="text-xs font-sans uppercase tracking-widest text-brand-secondary">
@@ -76,8 +115,14 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
                   </span>
                   <span>{item.label}</span>
                 </span>
-                <ArrowUpRight className="w-5 h-5 text-white/50 group-hover:text-brand-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
+                <ArrowUpRight
+                  className={`w-5 h-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${
+                    item.active
+                      ? "text-brand-secondary"
+                      : "text-white/50 group-hover:text-brand-secondary"
+                  }`}
+                />
+              </Link>
             </li>
           ))}
         </ul>
@@ -113,14 +158,14 @@ export function MobileNavigation({ isOpen, onClose }: MobileNavigationProps) {
           </button>
         </div>
 
-        <a
-          href="#contact"
+        <Link
+          href={isContactPage ? "#contact-form" : "/contact"}
           onClick={onClose}
           className="inline-flex items-center justify-center gap-2 bg-brand-secondary hover:bg-brand-primary text-white text-xs font-semibold uppercase tracking-widest px-6 py-3.5 transition-colors"
         >
           <span>{t.nav.inquireCta}</span>
           <ArrowUpRight className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
     </div>
   );
