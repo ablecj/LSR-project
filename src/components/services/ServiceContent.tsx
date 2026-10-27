@@ -96,6 +96,11 @@ export function ServiceContent({ service }: ServiceContentProps) {
     Boolean(service.conditions?.length) ||
     Boolean(service.taxBenefits?.length);
 
+  const isSingleEligibilityCard =
+    Boolean(service.eligibility?.length) &&
+    !service.taxBenefits?.length &&
+    !service.conditions?.length;
+
   return (
     <section
       ref={sectionRef}
@@ -134,12 +139,16 @@ export function ServiceContent({ service }: ServiceContentProps) {
                 <div className="inline-flex items-center gap-3 mb-4">
                   <span className="w-8 h-[2px] bg-brand-secondary" />
                   <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                    {t.servicesPage.detail.overviewSectionLabel}
+                    {service.overviewSectionLabel
+                      ? service.overviewSectionLabel[locale]
+                      : t.servicesPage.detail.overviewSectionLabel}
                   </span>
                 </div>
 
                 <h2 className="font-display text-[clamp(1.85rem,3vw,2.6rem)] text-brand-ink leading-[1.16] tracking-tight mb-5">
-                  {t.servicesPage.detail.overviewHeadline}
+                  {service.overviewHeadline
+                    ? service.overviewHeadline[locale]
+                    : t.servicesPage.detail.overviewHeadline}
                 </h2>
 
                 <p className="text-base sm:text-lg text-brand-slate leading-relaxed">
@@ -191,28 +200,44 @@ export function ServiceContent({ service }: ServiceContentProps) {
                 <div className="inline-flex items-center gap-3 mb-4">
                   <span className="w-8 h-[2px] bg-brand-secondary" />
                   <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                    {t.servicesPage.detail.eligibilitySectionLabel}
+                    {service.eligibilitySectionLabel
+                      ? service.eligibilitySectionLabel[locale]
+                      : t.servicesPage.detail.eligibilitySectionLabel}
                   </span>
                 </div>
 
                 <h2 className="font-display text-[clamp(1.85rem,3vw,2.6rem)] text-brand-ink leading-[1.16] tracking-tight mb-8">
-                  {t.servicesPage.detail.eligibilityHeadline}
+                  {service.eligibilityHeadline
+                    ? service.eligibilityHeadline[locale]
+                    : t.servicesPage.detail.eligibilityHeadline}
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Eligibility Column */}
                   {service.eligibility && service.eligibility.length > 0 && (
-                    <div className="bg-white border border-brand-border p-6 sm:p-8 shadow-subtle">
+                    <div
+                      className={`bg-white border border-brand-border p-6 sm:p-8 shadow-subtle ${
+                        isSingleEligibilityCard ? "md:col-span-2" : ""
+                      }`}
+                    >
                       <div className="flex items-center gap-3 pb-4 mb-5 border-b border-brand-border">
                         <div className="w-9 h-9 bg-brand-secondary-light text-brand-primary flex items-center justify-center shrink-0">
                           <ShieldCheck className="w-4 h-4" />
                         </div>
                         <h3 className="font-display text-xl text-brand-ink">
-                          {t.servicesPage.detail.eligibilityHeadline}
+                          {service.eligibilityHeading
+                            ? service.eligibilityHeading[locale]
+                            : t.servicesPage.detail.eligibilityHeadline}
                         </h3>
                       </div>
 
-                      <ul className="space-y-3.5">
+                      <ul
+                        className={
+                          isSingleEligibilityCard
+                            ? "grid grid-cols-1 sm:grid-cols-2 gap-3.5"
+                            : "space-y-3.5"
+                        }
+                      >
                         {service.eligibility.map((item) => (
                           <li
                             key={item.en}
@@ -226,7 +251,7 @@ export function ServiceContent({ service }: ServiceContentProps) {
                     </div>
                   )}
 
-                  {/* Tax Benefits Column (MRP / GRP) */}
+                  {/* Tax Benefits Column (GRP / TRP) */}
                   {service.taxBenefits && service.taxBenefits.length > 0 && (
                     <div className="bg-brand-primary-deep text-white border border-brand-primary-deep p-6 sm:p-8 shadow-subtle">
                       <div className="flex items-center gap-3 pb-4 mb-5 border-b border-white/15">
@@ -254,7 +279,7 @@ export function ServiceContent({ service }: ServiceContentProps) {
                     </div>
                   )}
 
-                  {/* Programme Conditions / Obligations Column (MPRP / GRP) */}
+                  {/* Programme Conditions / Obligations Column */}
                   {service.conditions && service.conditions.length > 0 && (
                     <div
                       className={`bg-brand-surface-muted border border-brand-border p-6 sm:p-8 shadow-subtle ${
@@ -293,19 +318,29 @@ export function ServiceContent({ service }: ServiceContentProps) {
               </div>
             )}
 
-            {/* 5. Process / Application Steps (Rendered Conditionally — e.g., Citizenship by Merit) */}
+            {/* 5. Process / Why Choose Malta / Financial Requirements (Rendered Conditionally) */}
             {service.process && service.process.length > 0 && (
               <div data-detail-block className="border-t border-brand-border pt-12">
                 <div className="inline-flex items-center gap-3 mb-4">
                   <span className="w-8 h-[2px] bg-brand-secondary" />
                   <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                    {t.servicesPage.detail.processSectionLabel}
+                    {service.processSectionLabel
+                      ? service.processSectionLabel[locale]
+                      : t.servicesPage.detail.processSectionLabel}
                   </span>
                 </div>
 
-                <h2 className="font-display text-[clamp(1.85rem,3vw,2.6rem)] text-brand-ink leading-[1.16] tracking-tight mb-8">
-                  {t.servicesPage.detail.processHeadline}
+                <h2 className="font-display text-[clamp(1.85rem,3vw,2.6rem)] text-brand-ink leading-[1.16] tracking-tight mb-6">
+                  {service.processHeadline
+                    ? service.processHeadline[locale]
+                    : t.servicesPage.detail.processHeadline}
                 </h2>
+
+                {service.processIntro && (
+                  <p className="text-base sm:text-lg text-brand-slate leading-relaxed mb-8">
+                    {service.processIntro[locale]}
+                  </p>
+                )}
 
                 <div className="space-y-4">
                   {service.process.map((step) => (
@@ -336,15 +371,19 @@ export function ServiceContent({ service }: ServiceContentProps) {
                 <div className="inline-flex items-center gap-3 mb-4">
                   <span className="w-8 h-[2px] bg-brand-secondary" />
                   <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-primary">
-                    {t.servicesPage.detail.profilesSectionLabel}
+                    {service.profilesSectionLabel
+                      ? service.profilesSectionLabel[locale]
+                      : t.servicesPage.detail.profilesSectionLabel}
                   </span>
                 </div>
 
                 <h2 className="font-display text-[clamp(1.85rem,3vw,2.6rem)] text-brand-ink leading-[1.16] tracking-tight mb-8">
-                  {t.servicesPage.detail.profilesHeadline}
+                  {service.profilesHeadline
+                    ? service.profilesHeadline[locale]
+                    : t.servicesPage.detail.profilesHeadline}
                 </h2>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {service.eligibleProfiles.map((profile) => {
                     const IconComponent =
                       PROFILE_ICON_MAP[profile.iconKey] || ShieldCheck;

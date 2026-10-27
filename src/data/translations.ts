@@ -74,13 +74,13 @@ export interface ServicesPageTranslations {
     headline: string;
     leadParagraph: string;
     secondaryParagraph: string;
-    captionBadge: string;
+    // captionBadge: string;
     captionTitle: string;
     captionLocation: string;
-    metrics: {
-      value: string;
-      label: string;
-    }[];
+    // metrics: {
+    //   value: string;
+    //   label: string;
+    // }[];
   };
   collection: {
     sectionLabel: string;
@@ -134,12 +134,14 @@ export interface ServicesPageTranslations {
 }
 
 export type ContactServiceKey =
-  | "mprp"
   | "citizenship-by-merit"
-  | "mrp"
+  | "mprp"
+  | "digital-nomad-visa"
+  | "startup-residence"
   | "grp"
-  | "corporate-relocation"
-  | "real-estate-tenancy"
+  | "trp"
+  | "real-estate"
+  | "education"
   | "general-inquiry";
 
 export interface ContactPageTranslations {
@@ -266,6 +268,9 @@ export interface TranslationDictionary {
     languageSelectorLabel: string;
     openMenuLabel: string;
     closeMenuLabel: string;
+    openServicesSubmenuLabel?: string;
+    closeServicesSubmenuLabel?: string;
+    servicesDropdownHeading?: string;
   };
   hero: {
     prevSlideLabel: string;
@@ -279,7 +284,7 @@ export interface TranslationDictionary {
     headline: string;
     leadParagraph: string;
     bodyParagraph: string;
-    placeholderNotice: string;
+    // placeholderNotice: string;
     pillars: {
       title: string;
       description: string;
@@ -302,7 +307,7 @@ export interface TranslationDictionary {
     sectionLabel: string;
     headline: string;
     description: string;
-    sampleBadge: string;
+    // sampleBadge: string;
     sampleDisclaimer: string;
   };
   contact: {
@@ -362,6 +367,9 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       languageSelectorLabel: "Select Website Language",
       openMenuLabel: "Open navigation menu",
       closeMenuLabel: "Close navigation menu",
+      openServicesSubmenuLabel: "Open Services submenu",
+      closeServicesSubmenuLabel: "Close Services submenu",
+      servicesDropdownHeading: "Official Malta Programmes",
     },
     hero: {
       prevSlideLabel: "Previous slide",
@@ -371,14 +379,14 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       scrollIndicator: "Scroll to explore",
     },
     about: {
-      sectionLabel: "01 / ABOUT LRS",
-      headline: "Where Legal Rigor Meets Effortless Global Relocation.",
+      sectionLabel: "ABOUT LRS",
+      headline: "About LRS Global Limited",
       leadParagraph:
-        "LRS (Legal & Relocation Services) is an integrated advisory practice built around a singular premise: cross-border mobility and commercial expansion require synchronized legal protection and on-the-ground relocation stewardship.",
+        "LRS Global Limited is a team of professional consultants specialising in global mobility, international investment opportunities and cross-border lifestyle planning.  It is headed by Dr. Alexei Dalli who has been actively involved in Malta’s residency and citizenship by investment sector since the launch of the Programme in 2016.",
       bodyParagraph:
-        "Whether advising a multinational enterprise on corporate structuring and work permits, or guiding an executive family through property acquisition, tenancy contracts, and destination settling, our methodology prioritizes clarity, statutory compliance, and personal discretion.",
-      placeholderNotice:
-        "Editorial Placeholder Overview — Ready to be customized with your firm's founding history, jurisdictional registrations, and verified client milestones.",
+        "LRS Global provides legal and practical advisory services to individuals, families and investors seeking to establish an international presence through global asset diversification, real estate investment and residency/citizenship by investment programmes.",
+      // placeholderNotice:
+      //   "Editorial Placeholder Overview — Ready to be customized with your firm's founding history, jurisdictional registrations, and verified client milestones.",
       pillars: [
         {
           title: "Single-Point Accountability",
@@ -401,10 +409,10 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       ctaLabel: "Discuss Your Mandate",
     },
     services: {
-      sectionLabel: "02 / PRACTICE AREAS & MOBILITY SERVICES",
+      sectionLabel: "PRACTICE AREAS & MOBILITY SERVICES",
       headline: "Integrated Capabilities Across Law & Relocation.",
       description:
-        "Explore our core advisory pillars and official Malta residency, tax, and citizenship pathways structured for international investors, retirees, and global professionals.",
+        "At LRS Global Limited, we provide tailored guidance for individuals, families, entrepreneurs and investors seeking new opportunities in Malta and beyond. From Maltese citizenship advisory and the Malta Permanent Residence Programme to the Digital Nomad Residence Permit, Startup Residence Programme, Global Residence Programme and The Residence Programme, we offer professional support in identifying suitable pathways based on your goals and eligibility. We also provide education consultancy, helping clients explore international learning opportunities and plan their future with confidence.",
       sampleNotice: "Editable Sample Practice Areas — Autoplay Loop Enabled",
       exploreLink: "Explore Service",
       viewAllCta: "Explore All Malta Programmes",
@@ -412,16 +420,16 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       nextLabel: "Next service card",
     },
     team: {
-      sectionLabel: "03 / ADVISORY LEADERSHIP",
+      sectionLabel: "ADVISORY LEADERSHIP",
       headline: "Guided by Seasoned Legal & Mobility Specialists.",
       description:
         "Our multidisciplinary structure pairs legal advocates with dedicated relocation consultants.",
-      sampleBadge: "SAMPLE PROFILE — REPLACE IN DATA FILE",
+      // sampleBadge: "SAMPLE PROFILE — REPLACE IN DATA FILE",
       sampleDisclaimer:
         "Note: The profiles below are clearly marked sample placeholders stored in src/data/siteContent.ts to demonstrate card layout, typography, and hover interactions without fabricating personnel.",
     },
     contact: {
-      sectionLabel: "04 / INITIATE AN INQUIRY",
+      sectionLabel: "INITIATE AN INQUIRY",
       headline: "Begin a Confidential Conversation with LRS.",
       description:
         "Share your legal or relocation requirements below. Contact coordinates are marked as editable placeholders until your official office details are inserted.",
@@ -432,11 +440,14 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       emailPlaceholder: "name@organization.com",
       serviceLabel: "Primary Area of Interest",
       serviceOptions: [
-        "Malta Permanent Residence Programme (MPRP)",
-        "Citizenship by Naturalisation on the Basis of Merit",
-        "Malta Retirement Programme (MRP)",
-        "Global Residence Programme (GRP)",
-        "Corporate Legal & Relocation Advisory",
+        "The Maltese Citizenship by Merit",
+        "Malta Permanent Residence Programme",
+        "Malta Digital Nomad Visa",
+        "Malta Startup Residence Programme",
+        "Global Residence Programme",
+        "The Residence Programme",
+        "Real Estate",
+        "Education",
       ],
       messageLabel: "Brief Outline of Requirements",
       messagePlaceholder:
@@ -475,14 +486,14 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
           "An integrated legal and global relocation practice engineered for multinational enterprises, executives, and returning NRIs.",
       },
       overview: {
-        sectionLabel: "01 / FIRM IDENTITY & MANDATE",
-        headline: "Synchronizing Legal Counsel with On-the-Ground Relocation Stewardship.",
+        sectionLabel: "FIRM IDENTITY & MANDATE",
+        headline: "About LRS Global Limited",
         leadParagraph:
-          "LRS (Legal & Relocation Services) was established around a clear operational insight: cross-border commercial expansion and executive mobility rarely succeed when legal representation and destination settling are handled by disconnected vendors.",
+          "LRS Global Limited is a team of professional consultants specialising in global mobility, international investment opportunities and cross-border lifestyle planning.  It is headed by Dr. Alexei Dalli who has been actively involved in Malta’s residency and citizenship by investment sector since the launch of the Programme in 2016.",
         secondaryParagraph:
-          "Our practice unites corporate and property counsel with seasoned relocation specialists under one roof. From entity incorporation, employment visas, and FRRO compliance to residential lease due diligence, title verification, and family settling-in, every mandate is executed with quiet precision.",
+          "LRS Global provides legal and practical advisory services to individuals, families and investors seeking to establish an international presence through global asset diversification, real estate investment and residency/citizenship by investment programmes. Our mission is to support our clients every step of their journey, offering tailored guidance, liaising with government authorities, and  delivering comprehensive legal and administrative assistance.",
         tertiaryParagraph:
-          "We serve corporate mobility teams, diplomatic personnel, international executives, and Non-Resident Indians seeking dependable legal protection and seamless transition management.",
+          "Having successfully managed numerous international projects, LRS Global Limited has developed extensive expertise across multiple jurisdictions. We have also established strong professional relationships with legal authorities, professionals, developers and financial service providers, enabling us to deliver efficient and effective solutions for our clients.",
         methodologyHeading: "The LRS Integrated Advisory Model",
         methodologyItems: [
           {
@@ -507,14 +518,14 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         secondaryCta: "Explore Practice Areas",
       },
       history: {
-        sectionLabel: "02 / OUR HISTORY & EVOLUTION",
+        sectionLabel: "OUR HISTORY & EVOLUTION",
         headline: "A Deliberate Progression of Legal & Mobility Capabilities.",
         description:
           "Our institutional journey is structured around expanding the depth of our legal counsel alongside our on-the-ground relocation infrastructure. Milestone dates below are structured as editable placeholders until verified firm dates are inserted.",
         deliverablePrefix: "Core Focus:",
       },
       missionVision: {
-        sectionLabel: "03 / PURPOSE & DIRECTION",
+        sectionLabel: " PURPOSE & DIRECTION",
         headline: "Guided by Statutory Clarity and Human-Centered Mobility.",
         description:
           "Our Mission defines the standards we uphold on every mandate today; our Vision charts the benchmark we set for cross-border advisory.",
@@ -542,15 +553,15 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         ],
       },
       values: {
-        sectionLabel: "04 / OUR CORE VALUES",
+        sectionLabel: "OUR CORE VALUES",
         headline: "The Principles Governing Every Client Engagement.",
         description:
-          "Whether reviewing a commercial lease deed or coordinating an executive family's arrival, our work is anchored by six non-negotiable professional standards.",
+          "At LRS Global Limited, our values are built on quality, personalized care, and a commitment to excellence. We believe in providing tailored, solution-oriented guidance with professionalism, transparency, and attention to detail. Through structured planning, continuous supervision, and collaborative teamwork, we support our clients at every stage of their journey, ensuring a smooth, efficient, and reliable experience.",
         bottomCtaPrompt: "Ready to experience our integrated advisory firsthand?",
         bottomCtaButton: "Schedule a Confidential Consultation",
       },
       partners: {
-        sectionLabel: "05 / OUR PARTNERS & INSTITUTIONAL NETWORK",
+        sectionLabel: "OUR PARTNERS & INSTITUTIONAL NETWORK",
         headline: "Collaborative Stewardship Across Legal & Mobility Ecosystems.",
         description:
           "LRS coordinates with vetted legal chambers, chartered property consultants, and global mobility networks. The showcase below uses official LRS brand marks alongside clearly labeled partner logo slots ready for your approved partner assets.",
@@ -563,41 +574,41 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         breadcrumbHome: "Home",
         breadcrumbCurrent: "Services",
         eyebrow: "MALTA RESIDENCY, TAX & CITIZENSHIP ADVISORY",
-        title: "Malta Residency & Tax Programmes",
+        title: "Malta Residency Programmes",
         subtitle:
           "Your pathway to secure living, investment, and global mobility—structured with statutory precision by LRS Legal & Relocation Services.",
       },
       intro: {
-        sectionLabel: "01 / ADVISORY MANDATE & PROGRAMME PORTFOLIO",
+        sectionLabel: " ADVISORY MANDATE & PROGRAMME PORTFOLIO",
         headline:
-          "Structured Pathways to Maltese Residency, Tax Status, and Merit Naturalisation.",
+          "Structured Pathways to Maltese Residency, Citizenship, Real Estate and Education",
         leadParagraph:
-          "LRS Legal & Relocation Services advises international investors, retirees, and high-achievement professionals across Malta's core residency, special tax status, and naturalisation frameworks.",
+          "LRS Global Limited provides expert guidance and personalized solutions for Maltese residency, citizenship, real estate investment, and educational opportunities, helping clients navigate every step with confidence, clarity, and professional support.",
         secondaryParagraph:
-          "Each programme is governed by distinct statutory rules—ranging from qualifying five-year property holdings and capital asset thresholds under the MPRP to pension remittance tax treatment under the MRP, Global Residence tax status, and Article 10(9) merit naturalisation.",
-        captionBadge: "MALTA ADVISORY PORTFOLIO",
+          "At LRS Global Limited, we simplify the journey to new opportunities in Malta through tailored immigration solutions, strategic property guidance, and educational support. Our experienced team is committed to delivering transparent advice, reliable assistance, and personalized service, helping individuals and families make informed decisions and build a secure future in Malta.",
+        // captionBadge: "MALTA ADVISORY PORTFOLIO",
         captionTitle: "LRS Valletta Chambers",
         captionLocation: "32A Scots House, South Street, Valletta, VLT1101, Malta",
-        metrics: [
-          {
-            value: "04",
-            label: "Official Malta Residency, Tax & Citizenship Frameworks",
-          },
-          {
-            value: "Valletta",
-            label: "32A Scots House, South Street, VLT1101, Malta",
-          },
-          {
-            value: "EN / ML",
-            label: "Bilingual Legal & Relocation Client Stewardship",
-          },
-        ],
+        // metrics: [
+        //   {
+        //     value: "04",
+        //     label: "Official Malta Residency, Tax & Citizenship Frameworks",
+        //   },
+        //   {
+        //     value: "Valletta",
+        //     label: "32A Scots House, South Street, VLT1101, Malta",
+        //   },
+        //   {
+        //     value: "EN / ML",
+        //     label: "Bilingual Legal & Relocation Client Stewardship",
+        //   },
+        // ],
       },
       collection: {
-        sectionLabel: "02 / PROGRAMME DIRECTORY",
-        headline: "Explore Our Four Malta Residency & Citizenship Programmes.",
+        sectionLabel: "PROGRAMME DIRECTORY",
+        headline: "Explore Our Malta Residency, Citizenship, Real Estate & Education Services.",
         description:
-          "Select a programme below to inspect its verified eligibility criteria, qualifying property and financial conditions, tax parameters, or evaluation stages.",
+          "Explore our citizenship, education, and real estate services to discover tailored opportunities, understand the relevant requirements, and find the right pathway to achieve your goals in Malta.",
         keyParametersLabel: "Key Programme Highlights",
         viewServiceCta: "Explore Programme Details",
         inquireServiceCta: "Direct Inquiry",
@@ -708,13 +719,14 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
           serviceLabel: "Service Interested In",
           servicePlaceholder: "Select a programme or advisory service (optional)",
           serviceOptions: {
-            mprp: "Malta Permanent Residence Programme (MPRP)",
-            "citizenship-by-merit":
-              "Citizenship by Naturalisation on the Basis of Merit",
-            mrp: "Malta Retirement Programme (MRP)",
-            grp: "Global Residence Programme (GRP)",
-            "corporate-relocation": "Corporate Legal & Executive Relocation Advisory",
-            "real-estate-tenancy": "Real Estate Due Diligence & Qualifying Property",
+            "citizenship-by-merit": "The Maltese Citizenship by Merit",
+            mprp: "Malta Permanent Residence Programme",
+            "digital-nomad-visa": "Malta Digital Nomad Visa",
+            "startup-residence": "Malta Startup Residence Programme",
+            grp: "Global Residence Programme",
+            trp: "The Residence Programme",
+            "real-estate": "Real Estate",
+            education: "Education",
             "general-inquiry": "General Legal or Mobility Consultation",
           },
           subjectLabel: "Subject",
@@ -822,6 +834,9 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       languageSelectorLabel: "ഭാഷ തിരഞ്ഞെടുക്കുക",
       openMenuLabel: "നാവിഗേഷൻ മെനു തുറക്കുക",
       closeMenuLabel: "നാവിഗേഷൻ മെനു അടയ്ക്കുക",
+      openServicesSubmenuLabel: "സേവനങ്ങളുടെ ഉപമെനു തുറക്കുക",
+      closeServicesSubmenuLabel: "സേവനങ്ങളുടെ ഉപമെനു അടയ്ക്കുക",
+      servicesDropdownHeading: "ഔദ്യോഗിക മാൾട്ട പ്രോഗ്രാമുകൾ",
     },
     hero: {
       prevSlideLabel: "മുമ്പത്തെ സ്ലൈഡ്",
@@ -832,13 +847,13 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
     },
     about: {
       sectionLabel: "01 / LRS-നെ പരിചയപ്പെടാം",
-      headline: "നിയമപരമായ കൃത്യതയും സുഗമമായ റീലൊക്കേഷൻ സേവനങ്ങളും ഒരൊറ്റ കുടക്കീഴിൽ.",
+      headline: "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡിനെക്കുറിച്ച്",
       leadParagraph:
-        "അന്താരാഷ്ട്ര തലത്തിലുള്ള ബിസിനസ് വിപുലീകരണത്തിനും താമസമാറ്റത്തിനും കൃത്യമായ നിയമസഹായവും പ്രായോഗിക റീലൊക്കേഷൻ പിന്തുണയും ഒരേസമയം ആവശ്യമാണ് എന്ന കാഴ്ചപ്പാടിലാണ് LRS (Legal & Relocation Services) പ്രവർത്തിക്കുന്നത്.",
+        "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡ് ആഗോളതലത്തിലുള്ള താമസ-കുടിയേറ്റ സൗകര്യങ്ങൾ, അന്താരാഷ്ട്ര നിക്ഷേപ അവസരങ്ങൾ, രാജ്യാതിർത്തികൾക്കപ്പുറമുള്ള ജീവിതശൈലി ആസൂത്രണം എന്നിവയിൽ വൈദഗ്ധ്യം നേടിയ പ്രൊഫഷണൽ കൺസൾട്ടന്റുമാരുടെ ഒരു സംഘമാണ്. 2016-ൽ മാൾട്ടയുടെ നിക്ഷേപത്തിലൂടെയുള്ള താമസാനുമതി, പൗരത്വ പദ്ധതികൾ ആരംഭിച്ചതു മുതൽ ഈ മേഖലയിൽ സജീവമായി പ്രവർത്തിച്ചുവരുന്ന ഡോ. അലക്സെയ് ഡാല്ലിയാണ് ഈ സ്ഥാപനത്തിന് നേതൃത്വം നൽകുന്നത്.",
       bodyParagraph:
-        "കോർപ്പറേറ്റ് സ്ഥാപനങ്ങളുടെ രജിസ്ട്രേഷൻ, വിസ-ഇമിഗ്രേഷൻ അനുമതികൾ എന്നിവ മുതൽ എക്സിക്യൂട്ടീവുകൾക്കും പ്രവാസി കുടുംബങ്ങൾക്കും ആവശ്യമായ വസ്തു ഇടപാട് പരിശോധന, വാടക കരാറുകൾ, പുതിയ നാട്ടിലെ താമസ സൗകര്യങ്ങൾ എന്നിവ വരെ വ്യക്തതയോടെയും വിശ്വാസ്യതയോടെയും ഞങ്ങൾ നിർവഹിക്കുന്നു.",
-      placeholderNotice:
-        "മാതൃകാ വിവരണം (Editorial Placeholder) — നിങ്ങളുടെ സ്ഥാപനത്തിന്റെ യഥാർത്ഥ ചരിത്രവും വിവരങ്ങളും ഇവിടെ എളുപ്പത്തിൽ ചേർക്കാവുന്നതാണ്.",
+        "ആഗോള ആസ്തി വൈവിധ്യവൽക്കരണം, റിയൽ എസ്റ്റേറ്റ് നിക്ഷേപം, നിക്ഷേപത്തിലൂടെയുള്ള താമസാനുമതി / പൗരത്വ പദ്ധതികൾ എന്നിവയിലൂടെ അന്താരാഷ്ട്ര സാന്നിധ്യം സ്ഥാപിക്കാൻ ആഗ്രഹിക്കുന്ന വ്യക്തികൾക്കും കുടുംബങ്ങൾക്കും നിക്ഷേപകർക്കും എൽആർഎസ് ഗ്ലോബൽ നിയമപരവും പ്രായോഗികവുമായ ഉപദേശക സേവനങ്ങൾ നൽകുന്നു.",
+      // placeholderNotice:
+      //   "മാതൃകാ വിവരണം (Editorial Placeholder) — നിങ്ങളുടെ സ്ഥാപനത്തിന്റെ യഥാർത്ഥ ചരിത്രവും വിവരങ്ങളും ഇവിടെ എളുപ്പത്തിൽ ചേർക്കാവുന്നതാണ്.",
       pillars: [
         {
           title: "ഏകീകൃത സേവന ശൈലി",
@@ -864,7 +879,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       sectionLabel: "02 / പ്രധാന സേവന മേഖലകൾ",
       headline: "നിയമ-റീലൊക്കേഷൻ രംഗത്തെ സമഗ്ര സേവനങ്ങൾ.",
       description:
-        "ഞങ്ങളുടെ പ്രധാന സേവന മേഖലകളും മാൾട്ട റസിഡൻസി, ടാക്സ്, പൗരത്വ പദ്ധതികളും താഴെ പരിചയപ്പെടാം.",
+        "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡ്മാൾട്ടയിലും മറ്റ് രാജ്യങ്ങളിലുമായി പുതിയ അവസരങ്ങൾ തേടുന്ന വ്യക്തികൾക്കും കുടുംബങ്ങൾക്കും സംരംഭകർക്കും നിക്ഷേപകർക്കും അനുയോജ്യമായ മാർഗനിർദേശങ്ങൾ നൽകുന്നു. മാൾട്ടീസ് പൗരത്വവുമായി ബന്ധപ്പെട്ട ഉപദേശങ്ങൾ, Malta Permanent Residence Programme, Digital Nomad Residence Permit, Startup Residence Programme, Global Residence Programme, The Residence Programme തുടങ്ങിയവയിലൂടെ, നിങ്ങളുടെ ലക്ഷ്യങ്ങൾക്കും യോഗ്യതകൾക്കും അനുയോജ്യമായ കുടിയേറ്റ-താമസ മാർഗങ്ങൾ കണ്ടെത്താൻ പ്രൊഫഷണൽ പിന്തുണ നൽകുന്നു. കൂടാതെ, അന്താരാഷ്ട്ര വിദ്യാഭ്യാസ അവസരങ്ങൾ കണ്ടെത്തുന്നതിനും ആത്മവിശ്വാസത്തോടെ ഭാവി ആസൂത്രണം ചെയ്യുന്നതിനും സഹായിക്കുന്ന വിദ്യാഭ്യാസ കൺസൾട്ടൻസി സേവനങ്ങളും ഞങ്ങൾ നൽകുന്നു.",
       sampleNotice: "എഡിറ്റ് ചെയ്യാവുന്ന മാതൃകാ സേവനങ്ങൾ • ഓട്ടോപ്ലേ കറൗസൽ",
       exploreLink: "കൂടുതൽ അറിയുക",
       viewAllCta: "എല്ലാ മാൾട്ട പ്രോഗ്രാമുകളും കാണുക",
@@ -876,7 +891,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       headline: "പരിചയസമ്പന്നരായ നിയമ-റീലൊക്കേഷൻ വിദഗ്ധർ.",
       description:
         "നിയമ രംഗത്തെയും അന്താരാഷ്ട്ര റീലൊക്കേഷൻ മേഖലയിലെയും വിദഗ്ധരുടെ കൂട്ടായ്മ.",
-      sampleBadge: "മാതൃകാ പ്രൊഫൈൽ — ഡാറ്റാ ഫയലിൽ മാറ്റം വരുത്താം",
+      // sampleBadge: "മാതൃകാ പ്രൊഫൈൽ — ഡാറ്റാ ഫയലിൽ മാറ്റം വരുത്താം",
       sampleDisclaimer:
         "ശ്രദ്ധിക്കുക: യഥാർത്ഥ വ്യക്തികളുടെ വിവരങ്ങൾ ചേർക്കുന്നതുവരെ ഡിസൈൻ വ്യക്തമാക്കുന്നതിനായി നൽകിയിട്ടുള്ള മാതൃകാ പ്രൊഫൈലുകളാണ് (Sample Placeholders) താഴെ കാണുന്നത്.",
     },
@@ -892,11 +907,14 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       emailPlaceholder: "name@organization.com",
       serviceLabel: "ആവശ്യമായ സേവന വിഭാഗം",
       serviceOptions: [
+        "മെറിറ്റ് അടിസ്ഥാനത്തിലുള്ള മാൾട്ടീസ് പൗരത്വം (Maltese Citizenship by Merit)",
         "മാൾട്ട പെർമനന്റ് റസിഡൻസ് പ്രോഗ്രാം (MPRP)",
-        "യോഗ്യതയുടെ അടിസ്ഥാനത്തിലുള്ള പൗരത്വം (Citizenship by Merit)",
-        "മാൾട്ട റിട്ടയർമെന്റ് പ്രോഗ്രാം (MRP)",
+        "മാൾട്ട ഡിജിറ്റൽ നോമാഡ് വിസ (Digital Nomad Visa)",
+        "മാൾട്ട സ്റ്റാർട്ടപ്പ് റസിഡൻസ് പ്രോഗ്രാം (Startup Residence)",
         "ഗ്ലോബൽ റസിഡൻസ് പ്രോഗ്രാം (GRP)",
-        "സംയോജിത നിയമ-റീലൊക്കേഷൻ ഉപദേശം",
+        "ദി റസിഡൻസ് പ്രോഗ്രാം (The Residence Programme)",
+        "റിയൽ എസ്റ്റേറ്റ് (Real Estate)",
+        "വിദ്യാഭ്യാസം (Education)",
       ],
       messageLabel: "ആവശ്യങ്ങളുടെ ലഘു വിവരണം",
       messagePlaceholder:
@@ -935,14 +953,14 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
           "ബഹുരാഷ്ട്ര സ്ഥാപനങ്ങൾക്കും എക്സിക്യൂട്ടീവുകൾക്കും പ്രവാസികൾക്കും (NRIs) വേണ്ടി രൂപകൽപ്പന ചെയ്ത സംയോജിത നിയമ-റീലൊക്കേഷൻ സേവന കേന്ദ്രം.",
       },
       overview: {
-        sectionLabel: "01 / സ്ഥാപനത്തിന്റെ വ്യക്തിത്വവും ലക്ഷ്യവും",
-        headline: "വിദഗ്ധ നിയമോപദേശവും പ്രായോഗിക റീലൊക്കേഷൻ സേവനങ്ങളും ഒരൊറ്റ കുടക്കീഴിൽ.",
+        sectionLabel: " സ്ഥാപനത്തിന്റെ വ്യക്തിത്വവും ലക്ഷ്യവും",
+        headline: "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡിനെക്കുറിച്ച്",
         leadParagraph:
-          "രാജ്യാന്തര തലത്തിലുള്ള ബിസിനസ് വിപുലീകരണവും എക്സിക്യൂട്ടീവ് താമസമാറ്റവും വിജയകരമാകണമെങ്കിൽ നിയമപരമായ സുരക്ഷയും പ്രാദേശിക റീലൊക്കേഷൻ പിന്തുണയും ഒരേസമയം ലഭ്യമാകണം എന്ന കാഴ്ചപ്പാടിലാണ് LRS (Legal & Relocation Services) പ്രവർത്തിക്കുന്നത്.",
+          "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡ് ആഗോള കുടിയേറ്റ സൗകര്യങ്ങൾ, അന്താരാഷ്ട്ര നിക്ഷേപ അവസരങ്ങൾ, രാജ്യാതിർത്തികൾക്കപ്പുറമുള്ള ജീവിതശൈലി ആസൂത്രണം എന്നിവയിൽ വൈദഗ്ധ്യം നേടിയ പ്രൊഫഷണൽ കൺസൾട്ടന്റുമാരുടെ ഒരു സംഘമാണ്.2016-ൽ മാൾട്ടയുടെ നിക്ഷേപത്തിലൂടെയുള്ള താമസാനുമതി, പൗരത്വ പദ്ധതികൾ ആരംഭിച്ചതു മുതൽ ഈ മേഖലയിൽ സജീവമായി പ്രവർത്തിച്ചുവരുന്ന ഡോ. അലക്സെയ് ഡാല്ലിയാണ് സ്ഥാപനത്തിന് നേതൃത്വം നൽകുന്നത്.",
         secondaryParagraph:
-          "പരിചയസമ്പന്നരായ അഭിഭാഷകരെയും റീലൊക്കേഷൻ വിദഗ്ധരെയും ഒരൊറ്റ ടീമായി ഞങ്ങൾ അണിനിരത്തുന്നു. കമ്പനി രജിസ്ട്രേഷൻ, വിസ-ഇമിഗ്രേഷൻ അനുമതികൾ, എഫ്.ആർ.ആർ.ഒ (FRRO) നടപടികൾ എന്നിവ മുതൽ വസ്തു ആധാര പരിശോധന, വാടക കരാറുകൾ, കുടുംബങ്ങൾക്കുള്ള താമസ സൗകര്യങ്ങൾ എന്നിവ വരെ കൃത്യതയോടെ നിർവഹിക്കുന്നു.",
+          "ആഗോള ആസ്തി വൈവിധ്യവൽക്കരണം, റിയൽ എസ്റ്റേറ്റ് നിക്ഷേപം, നിക്ഷേപത്തിലൂടെയുള്ള താമസാനുമതി / പൗരത്വ പദ്ധതികൾ എന്നിവയിലൂടെ അന്താരാഷ്ട്ര സാന്നിധ്യം സ്ഥാപിക്കാൻ ആഗ്രഹിക്കുന്ന വ്യക്തികൾക്കും കുടുംബങ്ങൾക്കും നിക്ഷേപകർക്കും എൽആർഎസ് ഗ്ലോബൽ നിയമപരവും പ്രായോഗികവുമായ ഉപദേശക സേവനങ്ങൾ നൽകുന്നു. ഞങ്ങളുടെ ഉപഭോക്താക്കളുടെ ഓരോ ചുവടുവയ്പ്പിലും അവർക്കൊപ്പം നിന്ന് പിന്തുണ നൽകുക എന്നതാണ് ഞങ്ങളുടെ ദൗത്യം. വ്യക്തിഗത ആവശ്യങ്ങൾക്കനുസരിച്ചുള്ള മാർഗനിർദേശം നൽകുക, സർക്കാർ അധികാരികളുമായി ഏകോപനം നടത്തുക, സമഗ്രമായ നിയമപരവും ഭരണപരവുമായ സഹായം ലഭ്യമാക്കുക എന്നിവയിലൂടെ അവരുടെ യാത്ര സുഗമമാക്കുന്നു.",
         tertiaryParagraph:
-          "കോർപ്പറേറ്റ് സ്ഥാപനങ്ങൾ, വിദേശ നയതന്ത്ര ഉദ്യോഗസ്ഥർ, ആഗോള എക്സിക്യൂട്ടീവുകൾ, നാട്ടിലേക്ക് തിരിച്ചെത്തുന്ന പ്രവാസികൾ എന്നിവർക്ക് വിശ്വസനീയമായ നിയമ പരിരക്ഷയും റീലൊക്കേഷൻ സഹായവും ഞങ്ങൾ ഉറപ്പാക്കുന്നു.",
+          "നിരവധി അന്താരാഷ്ട്ര പ്രോജക്ടുകൾ വിജയകരമായി കൈകാര്യം ചെയ്തതിലൂടെ, വിവിധ രാജ്യങ്ങളിലെ നിയമവ്യവസ്ഥകളിലും പ്രവർത്തനമേഖലകളിലും എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡ് വിപുലമായ വൈദഗ്ധ്യം നേടിയിട്ടുണ്ട്.നിയമാധികാരികൾ, നിയമവിദഗ്ധർ, പ്രോപ്പർട്ടി ഡെവലപ്പർമാർ, ധനകാര്യ സേവനദാതാക്കൾ എന്നിവരുമായി ശക്തമായ പ്രൊഫഷണൽ ബന്ധങ്ങളും ഞങ്ങൾ സ്ഥാപിച്ചിട്ടുണ്ട്. ഇതിലൂടെ ഞങ്ങളുടെ ഉപഭോക്താക്കൾക്ക് കാര്യക്ഷമവും ഫലപ്രദവുമായ പരിഹാരങ്ങൾ നൽകാൻ ഞങ്ങൾക്ക് സാധിക്കുന്നു.",
         methodologyHeading: "LRS സംയോജിത സേവന സവിശേഷതകൾ",
         methodologyItems: [
           {
@@ -967,14 +985,14 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         secondaryCta: "സേവന മേഖലകൾ കാണുക",
       },
       history: {
-        sectionLabel: "02 / ഞങ്ങളുടെ വളർച്ചയുടെ ഘട്ടങ്ങൾ",
+        sectionLabel: "ഞങ്ങളുടെ വളർച്ചയുടെ ഘട്ടങ്ങൾ",
         headline: "നിയമ-റീലൊക്കേഷൻ രംഗത്തെ പടിപടിയായ പുരോഗതി.",
         description:
           "നിയമോപദേശത്തോടൊപ്പം പ്രായോഗിക റീലൊക്കേഷൻ സൗകര്യങ്ങളും വിപുലീകരിച്ചുകൊണ്ടുള്ള ഞങ്ങളുടെ യാത്രയുടെ രൂപരേഖ താഴെ നൽകുന്നു. യഥാർത്ഥ വർഷങ്ങൾ ചേർക്കുന്നതുവരെ ഇവ മാതൃകാ വിവരങ്ങളായി (Editable Placeholders) ക്രമീകരിച്ചിരിക്കുന്നു.",
         deliverablePrefix: "പ്രധാന ഫോക്കസ്:",
       },
       missionVision: {
-        sectionLabel: "03 / ലക്ഷ്യവും കാഴ്ചപ്പാടും",
+        sectionLabel: " ലക്ഷ്യവും കാഴ്ചപ്പാടും",
         headline: "നിയമപരമായ വ്യക്തതയും മനുഷ്യത്വപരമായ റീലൊക്കേഷൻ സമീപനവും.",
         description:
           "ഓരോ ഇടപാടുകാരനും ഇന്ന് ഞങ്ങൾ ഉറപ്പുനൽകുന്ന സേവന ഗുണനിലവാരമാണ് ഞങ്ങളുടെ 'മിഷൻ'; ഭാവിയിലെ അന്താരാഷ്ട്ര ഉപദേശക രംഗത്ത് ഞങ്ങൾ ലക്ഷ്യമിടുന്ന മാതൃകയാണ് ഞങ്ങളുടെ 'വിഷൻ'.",
@@ -1002,10 +1020,10 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         ],
       },
       values: {
-        sectionLabel: "04 / ഞങ്ങളുടെ അടിസ്ഥാന മൂല്യങ്ങൾ",
+        sectionLabel: "ഞങ്ങളുടെ അടിസ്ഥാന മൂല്യങ്ങൾ",
         headline: "ഞങ്ങളുടെ പ്രവർത്തനങ്ങളെ നയിക്കുന്ന പ്രൊഫഷണൽ മൂല്യങ്ങൾ.",
         description:
-          "വാണിജ്യ കരാറുകൾ പരിശോധിക്കുന്നത് മുതൽ ഒരു കുടുംബത്തിന്റെ താമസമാറ്റം ക്രമീകരിക്കുന്നത് വരെയുള്ള എല്ലാ സേവനങ്ങളുടെയും അടിത്തറ ഈ ആറ് മൂല്യങ്ങളാണ്.",
+          "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡിന്റെ മൂല്യങ്ങൾ ഗുണനിലവാരം, വ്യക്തിഗത പരിഗണന, മികവിനോടുള്ള പ്രതിബദ്ധത എന്നിവയിൽ അധിഷ്ഠിതമാണ്. പ്രൊഫഷണലിസം, സുതാര്യത, സൂക്ഷ്മമായ ശ്രദ്ധ എന്നിവയോടെ ഓരോ ഉപഭോക്താവിന്റെയും ആവശ്യങ്ങൾക്കനുസരിച്ചുള്ള, പ്രശ്നപരിഹാരത്തിന് മുൻഗണന നൽകുന്ന മാർഗനിർദേശങ്ങൾ നൽകുന്നതിൽ ഞങ്ങൾ വിശ്വസിക്കുന്നു. കൃത്യമായ ആസൂത്രണം, തുടർച്ചയായ മേൽനോട്ടം, കൂട്ടായ പ്രവർത്തനം എന്നിവയിലൂടെ ഉപഭോക്താക്കളുടെ യാത്രയുടെ ഓരോ ഘട്ടത്തിലും ഞങ്ങൾ പിന്തുണ നൽകുന്നു. അതുവഴി സുഗമവും കാര്യക്ഷമവും വിശ്വസനീയവുമായ സേവനാനുഭവം ഉറപ്പാക്കുന്നു.",
         bottomCtaPrompt: "ഞങ്ങളുടെ സംയോജിത സേവനങ്ങളെക്കുറിച്ച് നേരിട്ട് സംസാരിക്കാൻ ആഗ്രഹിക്കുന്നുണ്ടോ?",
         bottomCtaButton: "കൺസൾട്ടേഷൻ സമയം തിരഞ്ഞെടുക്കുക",
       },
@@ -1023,41 +1041,41 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         breadcrumbHome: "ഹോം",
         breadcrumbCurrent: "സേവനങ്ങൾ",
         eyebrow: "മാൾട്ട റസിഡൻസി, ടാക്സ് & പൗരത്വ പദ്ധതികൾ",
-        title: "മാൾട്ട റസിഡൻസി & ടാക്സ് പ്രോഗ്രാമുകൾ",
+        title: "മാൾട്ട റസിഡൻസി പ്രോഗ്രാമുകൾ",
         subtitle:
           "സുരക്ഷിതമായ താമസം, വസ്തു നിക്ഷേപം, ആഗോള മൊബിലിറ്റി എന്നിവയ്ക്കായുള്ള നിങ്ങളുടെ വഴികാട്ടി — LRS ലീഗൽ & റീലൊക്കേഷൻ സർവീസസ്.",
       },
       intro: {
-        sectionLabel: "01 / സേവന പരിചയവും പ്രോഗ്രാം പോർട്ട്ഫോളിയോയും",
+        sectionLabel: "സേവന പരിചയവും പ്രോഗ്രാം പോർട്ട്ഫോളിയോയും",
         headline:
-          "മാൾട്ടയിലെ സ്ഥിരതാമസം, നികുതി ആനുകൂല്യങ്ങൾ, പൗരത്വം എന്നിവയ്ക്കായുള്ള സമഗ്ര പദ്ധതികൾ.",
+          "മാൾട്ടയിലെ താമസാനുമതി, പൗരത്വം, റിയൽ എസ്റ്റേറ്റ്, വിദ്യാഭ്യാസം എന്നിവയിലേക്കുള്ള ചിട്ടയായ മാർഗങ്ങൾ",
         leadParagraph:
-          "നിക്ഷേപകർ, പെൻഷൻ വരുമാനമുള്ള വിരമിച്ച വ്യക്തികൾ, വിവിധ മേഖലകളിലെ പ്രഗത്ഭരായ പ്രൊഫഷണലുകൾ എന്നിവർക്ക് മാൾട്ടയിലെ ഔദ്യോഗിക റസിഡൻസി, ടാക്സ്, പൗരത്വ പ്രോഗ്രാമുകളിലൂടെ കൃത്യമായ നിയമ-റീലൊക്കേഷൻ മാർഗ്ഗനിർദ്ദേശം LRS നൽകുന്നു.",
+          "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡ് മാൾട്ടയിലെ താമസാനുമതി, പൗരത്വം, റിയൽ എസ്റ്റേറ്റ് നിക്ഷേപം, വിദ്യാഭ്യാസ അവസരങ്ങൾ എന്നിവയ്ക്കായി വിദഗ്ധ മാർഗനിർദേശവും വ്യക്തിഗത ആവശ്യങ്ങൾക്കനുസരിച്ചുള്ള പരിഹാരങ്ങളും നൽകുന്നു. ഓരോ ഘട്ടവും ആത്മവിശ്വാസത്തോടെയും വ്യക്തമായ ധാരണയോടെയും പ്രൊഫഷണൽ പിന്തുണയോടെയും പൂർത്തിയാക്കാൻ ഉപഭോക്താക്കളെ സഹായിക്കുന്നു.",
         secondaryParagraph:
-          "വസ്തു നിക്ഷേപത്തിലും സർക്കാർ വിഹിതത്തിലും അധിഷ്ഠിതമായ MPRP, ആർട്ടിക്കിൾ 10(9) പ്രകാരമുള്ള മെറിറ്റ് പൗരത്വം, പെൻഷൻകാർക്കുള്ള മാൾട്ട റിട്ടയർമെന്റ് പ്രോഗ്രാം (MRP), ഗ്ലോബൽ റസിഡൻസ് പ്രോഗ്രാം (GRP) എന്നീ നാല് പദ്ധതികളുടെ ഔദ്യോഗിക വിവരങ്ങൾ താഴെ പരിശോധിക്കാം.",
-        captionBadge: "മാൾട്ട അഡ്വൈസറി പോർട്ട്ഫോളിയോ",
+          "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡിലൂടെ മാൾട്ടയിലെ പുതിയ അവസരങ്ങളിലേക്കുള്ള നിങ്ങളുടെ യാത്ര ലളിതമാക്കുന്നു. വ്യക്തിഗത ആവശ്യങ്ങൾക്കനുസരിച്ചുള്ള കുടിയേറ്റ പരിഹാരങ്ങൾ, തന്ത്രപരമായ പ്രോപ്പർട്ടി നിക്ഷേപ മാർഗനിർദേശങ്ങൾ, വിദ്യാഭ്യാസ സഹായം എന്നിവ ഞങ്ങൾ നൽകുന്നു. പരിചയസമ്പന്നരായ ഞങ്ങളുടെ ടീം സുതാര്യമായ ഉപദേശങ്ങൾ, വിശ്വസനീയമായ സഹായം, വ്യക്തിഗത സേവനങ്ങൾ എന്നിവ ഉറപ്പാക്കാൻ പ്രതിജ്ഞാബദ്ധമാണ്. ഇതിലൂടെ വ്യക്തികൾക്കും കുടുംബങ്ങൾക്കും അറിവോടെയുള്ള തീരുമാനങ്ങൾ എടുക്കാനും മാൾട്ടയിൽ സുരക്ഷിതമായ ഭാവി കെട്ടിപ്പടുക്കാനും ഞങ്ങൾ സഹായിക്കുന്നു.",
+        // captionBadge: "മാൾട്ട അഡ്വൈസറി പോർട്ട്ഫോളിയോ",
         captionTitle: "LRS വലേറ്റ ചേംബർ",
         captionLocation: "32A Scots House, South Street, Valletta, VLT1101, Malta",
-        metrics: [
-          {
-            value: "04",
-            label: "ഔദ്യോഗിക മാൾട്ട റസിഡൻസി, ടാക്സ് & പൗരത്വ പ്രോഗ്രാമുകൾ",
-          },
-          {
-            value: "Valletta",
-            label: "32A സ്കോട്ട്സ് ഹൗസ്, സൗത്ത് സ്ട്രീറ്റ്, വലേറ്റ, മാൾട്ട",
-          },
-          {
-            value: "EN / ML",
-            label: "ഇംഗ്ലീഷ്, മലയാളം ഭാഷകളിൽ സമഗ്ര സേവന വിവരങ്ങൾ",
-          },
-        ],
+        // metrics: [
+        //   {
+        //     value: "04",
+        //     label: "ഔദ്യോഗിക മാൾട്ട റസിഡൻസി, ടാക്സ് & പൗരത്വ പ്രോഗ്രാമുകൾ",
+        //   },
+        //   {
+        //     value: "Valletta",
+        //     label: "32A സ്കോട്ട്സ് ഹൗസ്, സൗത്ത് സ്ട്രീറ്റ്, വലേറ്റ, മാൾട്ട",
+        //   },
+        //   {
+        //     value: "EN / ML",
+        //     label: "ഇംഗ്ലീഷ്, മലയാളം ഭാഷകളിൽ സമഗ്ര സേവന വിവരങ്ങൾ",
+        //   },
+        // ],
       },
       collection: {
-        sectionLabel: "02 / പ്രോഗ്രാം പട്ടിക",
-        headline: "ഞങ്ങളുടെ നാല് മാൾട്ട റസിഡൻസി & പൗരത്വ പ്രോഗ്രാമുകൾ.",
+        sectionLabel: " പ്രോഗ്രാം പട്ടിക",
+        headline: "ഞങ്ങളുടെ മാൾട്ട റസിഡൻസി, പൗരത്വ, റിയൽ എസ്റ്റേറ്റ് & വിദ്യാഭ്യാസ സേവനങ്ങൾ.",
         description:
-          "ഓരോ പ്രോഗ്രാമിന്റെയും യോഗ്യതാ മാനദണ്ഡങ്ങൾ, വസ്തു നിക്ഷേപ-നികുതി വ്യവസ്ഥകൾ, അപേക്ഷാ ഘട്ടങ്ങൾ എന്നിവ വിശദമായി അറിയാൻ താഴെ നൽകിയ പ്രോഗ്രാമുകൾ തിരഞ്ഞെടുക്കുക.",
+          "മാൾട്ടയിൽ നിങ്ങളുടെ ലക്ഷ്യങ്ങൾ കൈവരിക്കുന്നതിനായി വ്യക്തിഗത ആവശ്യങ്ങൾക്കനുസരിച്ചുള്ള അവസരങ്ങൾ കണ്ടെത്താനും, ബന്ധപ്പെട്ട ആവശ്യകതകൾ മനസ്സിലാക്കാനും, അനുയോജ്യമായ മാർഗം തിരഞ്ഞെടുക്കാനും ഞങ്ങളുടെ പൗരത്വം, വിദ്യാഭ്യാസം, റിയൽ എസ്റ്റേറ്റ് സേവനങ്ങൾ പര്യവേക്ഷണം ചെയ്യുക.",
         keyParametersLabel: "പ്രധാന പ്രോഗ്രാം സവിശേഷതകൾ",
         viewServiceCta: "പ്രോഗ്രാം വിശദാംശങ്ങൾ കാണുക",
         inquireServiceCta: "അന്വേഷിക്കുക",
@@ -1168,13 +1186,16 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
           serviceLabel: "താല്പര്യമുള്ള സേവനം",
           servicePlaceholder: "ഒരു പ്രോഗ്രാം അല്ലെങ്കിൽ സേവനം തിരഞ്ഞെടുക്കുക (നിർബന്ധമില്ല)",
           serviceOptions: {
-            mprp: "മാൾട്ട പെർമനന്റ് റസിഡൻസ് പ്രോഗ്രാം (MPRP)",
             "citizenship-by-merit":
-              "യോഗ്യതയുടെ അടിസ്ഥാനത്തിലുള്ള പൗരത്വം (Citizenship by Merit)",
-            mrp: "മാൾട്ട റിട്ടയർമെന്റ് പ്രോഗ്രാം (MRP)",
+              "മെറിറ്റ് അടിസ്ഥാനത്തിലുള്ള മാൾട്ടീസ് പൗരത്വം (Maltese Citizenship by Merit)",
+            mprp: "മാൾട്ട പെർമനന്റ് റസിഡൻസ് പ്രോഗ്രാം (MPRP)",
+            "digital-nomad-visa": "മാൾട്ട ഡിജിറ്റൽ നോമാഡ് വിസ (Digital Nomad Visa)",
+            "startup-residence":
+              "മാൾട്ട സ്റ്റാർട്ടപ്പ് റസിഡൻസ് പ്രോഗ്രാം (Startup Residence)",
             grp: "ഗ്ലോബൽ റസിഡൻസ് പ്രോഗ്രാം (GRP)",
-            "corporate-relocation": "കോർപ്പറേറ്റ് നിയമോപദേശവും എക്സിക്യൂട്ടീവ് റീലൊക്കേഷനും",
-            "real-estate-tenancy": "വസ്തു ഇടപാട് പരിശോധനയും പ്രോപ്പർട്ടി കംപ്ലയൻസും",
+            trp: "ദി റസിഡൻസ് പ്രോഗ്രാം (The Residence Programme)",
+            "real-estate": "റിയൽ എസ്റ്റേറ്റ് (Real Estate)",
+            education: "വിദ്യാഭ്യാസം (Education)",
             "general-inquiry": "പൊതുവായ നിയമ-റീലൊക്കേഷൻ കൺസൾട്ടേഷൻ",
           },
           subjectLabel: "വിഷയം",

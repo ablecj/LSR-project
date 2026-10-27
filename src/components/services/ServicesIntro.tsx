@@ -60,7 +60,7 @@ export function ServicesIntro() {
               data-animate="fade-up"
               className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-7 border-t border-brand-border"
             >
-              {t.servicesPage.intro.metrics.map((metric) => (
+              {/* {t.servicesPage.intro.metrics.map((metric) => (
                 <div
                   key={metric.value}
                   className="bg-brand-surface-muted border border-brand-border p-4"
@@ -72,7 +72,7 @@ export function ServicesIntro() {
                     {metric.label}
                   </p>
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
 
@@ -87,9 +87,9 @@ export function ServicesIntro() {
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-3 left-3 bg-brand-primary-deep/90 text-white text-[10px] font-mono uppercase tracking-[0.18em] px-3 py-1.5">
+                {/* <div className="absolute top-3 left-3 bg-brand-primary-deep/90 text-white text-[10px] font-mono uppercase tracking-[0.18em] px-3 py-1.5">
                   {t.servicesPage.intro.captionBadge}
-                </div>
+                </div> */}
               </div>
 
               <div className="mt-5 flex items-start justify-between gap-4 border-t border-brand-border pt-4">

@@ -188,11 +188,11 @@ export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
               <p className="text-sm font-semibold text-white leading-snug">
                 {service.officialName}
               </p>
-              {service.statutoryBasis && (
+              {/* {service.statutoryBasis && (
                 <p className="text-xs text-white/75 mt-2 pt-2 border-t border-white/15">
                   {service.statutoryBasis[locale]}
                 </p>
-              )}
+              )} */}
             </div>
           </div>
         </div>

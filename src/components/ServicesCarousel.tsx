@@ -107,7 +107,7 @@ export function ServicesCarousel() {
       <div className="max-w-editorial mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
-          <div className="max-w-2xl">
+          <div className="max-w-5xl">
             <div
               data-animate="fade-up"
               className="inline-flex items-center gap-3 mb-4"
@@ -119,7 +119,7 @@ export function ServicesCarousel() {
             </div>
             <h2
               data-animate="fade-up"
-              className="font-display text-[clamp(2rem,3.5vw,3.1rem)] text-brand-ink leading-[1.15] tracking-tight mb-4"
+              className="font-display text-[clamp(2rem,3.5vw,2.1rem)] text-brand-ink leading-[1.15] tracking-tight mb-4"
             >
               {t.services.headline}
             </h2>

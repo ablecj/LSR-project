@@ -50,24 +50,22 @@ export const HERO_SLIDES: HeroSlide[] = [
       ml: "അന്താരാഷ്ട്ര കോർപ്പറേറ്റ് ആസ്ഥാനത്തിന്റെ മനോഹരമായ ആട്രിയം ദൃശ്യം",
     },
     eyebrow: {
-      en: "INTEGRATED LEGAL & GLOBAL MOBILITY COUNSEL",
-      ml: "സംയോജിത നിയമ-റീലൊക്കേഷൻ ഉപദേശക സേവനങ്ങൾ",
+      en: "YOUR FUTURE, BEYOND BORDERS",
+      ml: "അതിരുകളില്ലാത്ത നിങ്ങളുടെ ഭാവിയിലേക്ക്",
     },
     headline: {
       en: [
-        "Navigating Cross-Border Law",
-        "and Executive Relocation",
-        "with Quiet Precision.",
+        "A New Chapter in Malta.",
+        "A World of Possibilities.",
       ],
       ml: [
-        "അന്താരാഷ്ട്ര നിയമ-റീലൊക്കേഷൻ",
-        "സേവനങ്ങളിൽ കൃത്യതയാർന്ന",
-        "വിദഗ്ധ മാർഗ്ഗനിർദ്ദേശം.",
+        "മാൾട്ടയിൽ ഒരു പുതിയ തുടക്കം.",
+        "സാധ്യതകളുടെ വിശാലമായ ലോകം.",
       ],
     },
     description: {
-      en: "LRS unites corporate legal structuring, regulatory compliance, and end-to-end relocation management under one dedicated advisory practice.",
-      ml: "കോർപ്പറേറ്റ് നിയമ നടപടികൾ, വിസ-ഇമിഗ്രേഷൻ അനുമതികൾ, എക്സിക്യൂട്ടീവ് റീലൊക്കേഷൻ സേവനങ്ങൾ എന്നിവ ഒരൊറ്റ മേൽക്കൂരയ്ക്ക് കീഴിൽ LRS ലഭ്യമാക്കുന്നു.",
+      en: "Discover tailored residency pathways through Malta's Permanent Residence, Digital Nomad, and Startup programmes. Our team provides personalised guidance to help you plan your next move with confidence.",
+      ml: "മാൾട്ട പെർമനന്റ് റെസിഡൻസ്, ഡിജിറ്റൽ നോമാഡ്, സ്റ്റാർട്ടപ്പ് റെസിഡൻസ് പ്രോഗ്രാമുകളിലൂടെ അനുയോജ്യമായ താമസാനുമതി മാർഗങ്ങൾ കണ്ടെത്താം. നിങ്ങളുടെ അടുത്ത ചുവടുവെപ്പ് ആത്മവിശ്വാസത്തോടെ ആസൂത്രണം ചെയ്യാൻ ഞങ്ങളുടെ വ്യക്തിഗത മാർഗനിർദേശം.",
     },
     primaryCta: {
       en: "Schedule a Consultation",
@@ -88,24 +86,23 @@ export const HERO_SLIDES: HeroSlide[] = [
       ml: "എക്സിക്യൂട്ടീവ് റീലൊക്കേഷൻ പ്രതിനിധീകരിക്കുന്ന ആധുനിക വസതി",
     },
     eyebrow: {
-      en: "BESPOKE DESTINATION & PRIVATE CLIENT SETTLING",
-      ml: "വ്യക്തിഗത-കുടുംബ റീലൊക്കേഷൻ സഹായം",
+      en: "PERSONALISED CITIZENSHIP & GLOBAL MOBILITY ADVISORY",
+      ml: "വ്യക്തിഗത പൗരത്വ, ആഗോള മൊബിലിറ്റി മാർഗനിർദേശം",
     },
     headline: {
       en: [
-        "Seamless Transitions for",
-        "Global Executives, Families,",
-        "and ReturningNRIs.",
+        "Your Global Journey",
+        "Begins with the Right Guidance.",
       ],
       ml: [
-        "ആഗോള എക്സിക്യൂട്ടീവുകൾക്കും",
-        "കുടുംബങ്ങൾക്കും സുഗമമായ",
-        "വാസസ്ഥല മാറ്റം.",
+        "ശരിയായ മാർഗനിർദേശത്തിലൂടെ",
+        "നിങ്ങളുടെ ആഗോള യാത്രയ്ക്ക് ",
+        "തുടക്കം കുറിക്കാം.",
       ],
     },
     description: {
-      en: "From visa clearances and residential lease structuring to school admissions and local registration, every relocation milestone is handled with discretion.",
-      ml: "വിസ ക്ലിയറൻസ്, ഭവന വാടക കരാറുകൾ, തദ്ദേശ രജിസ്ട്രേഷൻ തുടങ്ങി പുതിയൊരു നാട്ടിലേക്ക് മാറുമ്പോഴുള്ള എല്ലാ ഘട്ടങ്ങളിലും പൂർണ്ണ പിന്തുണ.",
+      en: "Navigate citizenship matters and international mobility with clarity. From understanding potential Maltese citizenship pathways to cross-border planning, we offer considered guidance tailored to your circumstances.",
+      ml: "പൗരത്വവുമായി ബന്ധപ്പെട്ട കാര്യങ്ങളും അന്താരാഷ്ട്ര യാത്രാ-താമസ സാധ്യതകളും വ്യക്തതയോടെ മനസ്സിലാക്കാം. മാൾട്ടീസ് പൗരത്വത്തിനുള്ള സാധ്യതയുള്ള മാർഗങ്ങൾ അറിയുന്നതു മുതൽ രാജ്യാന്തര ആസൂത്രണം വരെ, നിങ്ങളുടെ സാഹചര്യങ്ങൾക്ക് അനുയോജ്യമായ വിദഗ്ധ മാർഗനിർദേശം.",
     },
     primaryCta: {
       en: "Explore Relocation Services",
@@ -126,24 +123,23 @@ export const HERO_SLIDES: HeroSlide[] = [
       ml: "ആധുനിക ലീഗൽ അഡ്വൈസറി ബോർഡ്റൂം",
     },
     eyebrow: {
-      en: "CORPORATE GOVERNANCE & REAL ESTATE DOCUMENTATION",
-      ml: "കോർപ്പറേറ്റ് നിയമങ്ങളും വസ്തു ഇടപാട് രേഖകളും",
+      en: "A SMOOTHER MOVE FOR YOU & YOUR FAMILY",
+      ml: "നിങ്ങൾക്കും കുടുംബത്തിനും സുഗമമായൊരു പുതിയ തുടക്കം",
     },
     headline: {
       en: [
-        "Diligent Legal Protection",
-        "for Commercial Entities",
-        "and Property Assets.",
+        "New Beginnings.",
+        "Thoughtfully Planned for Every Generation.",
       ],
       ml: [
-        "വാണിജ്യ സ്ഥാപനങ്ങൾക്കും",
-        "വസ്തു ഇടപാടുകൾക്കും",
-        "ശക്തമായ നിയമ പരിരക്ഷ.",
+        "പുതിയ തുടക്കങ്ങൾ.",
+        "ഓരോ തലമുറയ്ക്കും കരുതലോടെയുള്ള ആസൂത്രണം.",
+
       ],
     },
     description: {
-      en: "Structured legal due diligence, contract drafting, and statutory compliance tailored for businesses establishing or expanding operations.",
-      ml: "വ്യവസായ സംരംഭങ്ങൾക്കും വ്യക്തിഗത നിക്ഷേപങ്ങൾക്കും ആവശ്യമായ കരാറുകൾ, ഡ്യൂ ഡിലിജൻസ്, നിയമപരമായ അനുമതികൾ എന്നിവ കൃത്യതയോടെ നിർവഹിക്കുന്നു.",
+      en: "From education opportunities and residence planning to settling into a new way of life, we help individuals and families navigate each step of their Malta journey with personalised support.",
+      ml: "വിദ്യാഭ്യാസ അവസരങ്ങളും താമസ ആസൂത്രണവും മുതൽ പുതിയ ജീവിതത്തിലേക്കുള്ള മാറ്റം വരെ, മാൾട്ടയിലെ നിങ്ങളുടെ യാത്രയുടെ ഓരോ ഘട്ടത്തിലും വ്യക്തികൾക്കും കുടുംബങ്ങൾക്കും വ്യക്തിഗത പിന്തുണയോടെ ഞങ്ങൾ മാർഗനിർദേശം നൽകുന്നു.",
     },
     primaryCta: {
       en: "Request Legal Advisory",
@@ -409,7 +405,7 @@ export interface CoreValueItem {
   iconName: "scale" | "shield" | "compass" | "globe" | "fileCheck" | "handshake";
   title: Record<Locale, string>;
   description: Record<Locale, string>;
-  principleTag: Record<Locale, string>;
+  // principleTag: Record<Locale, string>;
 }
 
 export interface PartnerSlotItem {
@@ -526,103 +522,53 @@ export const CORE_VALUES_DATA: CoreValueItem[] = [
     number: "01",
     iconName: "scale",
     title: {
-      en: "Statutory & Legal Precision",
-      ml: "നിയമപരമായ സൂക്ഷ്മത",
+      en: "QUALITY",
+      ml: "മൂല്യങ്ങൾ",
     },
     description: {
-      en: "Every contract, title opinion, corporate filing, and visa petition is grounded in rigorous statutory verification and current regulatory frameworks.",
-      ml: "ഓരോ കരാറും, ആധാര പരിശോധനയും, കമ്പനി രേഖകളും, വിസ അപേക്ഷകളും നിലവിലെ നിയമ മാനദണ്ഡങ്ങൾക്കനുസൃതമായി അതീവ സൂക്ഷ്മതയോടെ തയ്യാറാക്കുന്നു.",
+      en: "We believe in providing clients with personalized, creative solutions efficiently and with the highest standards of care and professionalism.",
+      ml: "ഓരോ ഉപഭോക്താവിന്റെയും ആവശ്യങ്ങൾക്കനുസരിച്ചുള്ള വ്യക്തിഗതവും നൂതനവുമായ പരിഹാരങ്ങൾ ഉയർന്ന നിലവാരത്തിലുള്ള കരുതലോടെയും പ്രൊഫഷണലിസത്തോടെയും കാര്യക്ഷമമായി നൽകുന്നതിൽ ഞങ്ങൾ വിശ്വസിക്കുന്നു.",
     },
-    principleTag: {
-      en: "ZERO REGULATORY AMBIGUITY",
-      ml: "കൃത്യതയാർന്ന നിയമ നടപടികൾ",
-    },
+    // principleTag: {
+    //   en: "ZERO REGULATORY AMBIGUITY",
+    //   ml: "കൃത്യതയാർന്ന നിയമ നടപടികൾ",
+    // },
   },
   {
     id: "value-02",
     number: "02",
     iconName: "shield",
     title: {
-      en: "Uncompromising Discretion",
-      ml: "സമ്പൂർണ്ണ സ്വകാര്യതയും വിശ്വാസ്യതയും",
+      en: "SUPERVISION",
+      ml:  "മേൽനോട്ടം",
     },
     description: {
-      en: "We safeguard sensitive corporate expansion plans, executive movements, and private family property matters with strict professional confidentiality.",
-      ml: "കോർപ്പറേറ്റ് വിപുലീകരണ പദ്ധതികൾ, എക്സിക്യൂട്ടീവ് യാത്രകൾ, വ്യക്തിഗത വസ്തു ഇടപാടുകൾ എന്നിവ തികഞ്ഞ സ്വകാര്യതയോടെയും രഹസ്യസ്വഭാവത്തോടെയും കൈകാര്യം ചെയ്യുന്നു.",
+      en: "We create a plan of action step-by-step for each client. We assist clients throughout the process and we supervise each stage of the application.",
+      ml: "ഓരോ ഉപഭോക്താവിനും ഘട്ടംഘട്ടമായ പ്രവർത്തനപദ്ധതി തയ്യാറാക്കുന്നു. മുഴുവൻ പ്രക്രിയയിലുടനീളം ആവശ്യമായ മാർഗനിർദേശവും പിന്തുണയും നൽകുകയും അപേക്ഷയുടെ ഓരോ ഘട്ടവും കൃത്യമായി നിരീക്ഷിക്കുകയും ചെയ്യുന്നു.",
     },
-    principleTag: {
-      en: "CONFIDENTIAL CLIENT STEWARDSHIP",
-      ml: "ഉയർന്ന പ്രൊഫഷണൽ രഹസ്യസ്വഭാവം",
-    },
+    // principleTag: {
+    //   en: "CONFIDENTIAL CLIENT STEWARDSHIP",
+    //   ml: "ഉയർന്ന പ്രൊഫഷണൽ രഹസ്യസ്വഭാവം",
+    // },
   },
   {
     id: "value-03",
     number: "03",
     iconName: "compass",
     title: {
-      en: "Single-Window Accountability",
-      ml: "ഏകീകൃത ഉത്തരവാദിത്തം",
+      en: "TEAMWORK",
+      ml: "കൂട്ടായ പ്രവർത്തനം",
     },
     description: {
-      en: "By uniting legal counsel and field relocation specialists within one practice, our clients never experience fragmented communication or vendor handoffs.",
-      ml: "നിയമ വിദഗ്ധരും റീലൊക്കേഷൻ കൺസൾട്ടന്റുമാരും ഒരേ ടീമായി പ്രവർത്തിക്കുന്നതിനാൽ ഇടപാടുകാർക്ക് വിവിധ ഏജൻസികളെ ആശ്രയിക്കേണ്ട ബുദ്ധിമുട്ട് ഒഴിവാകുന്നു.",
+      en: "It is only through teamwork that we achieve greatness. A solution focused approach will be provided by our diverse team working as one.",
+      ml: "കൂട്ടായ പ്രവർത്തനത്തിലൂടെയാണ് മികവ് കൈവരിക്കാൻ കഴിയുന്നതെന്ന് ഞങ്ങൾ വിശ്വസിക്കുന്നു. വൈവിധ്യമാർന്ന കഴിവുകളും അനുഭവസമ്പത്തുമുള്ള ഞങ്ങളുടെ ടീം ഒരുമിച്ച് പ്രവർത്തിച്ച്, ഓരോ ഉപഭോക്താവിന്റെയും ആവശ്യങ്ങൾക്കനുസരിച്ചുള്ള ഫലപ്രദവും പരിഹാരാധിഷ്ഠിതവുമായ സേവനങ്ങൾ നൽകുന്നു.",
     },
-    principleTag: {
-      en: "SYNCHRONIZED EXECUTION",
-      ml: "ഒരൊറ്റ കുടക്കീഴിൽ സമഗ്ര സേവനം",
-    },
+    // principleTag: {
+    //   en: "SYNCHRONIZED EXECUTION",
+    //   ml: "ഒരൊറ്റ കുടക്കീഴിൽ സമഗ്ര സേവനം",
+    // },
   },
-  {
-    id: "value-04",
-    number: "04",
-    iconName: "fileCheck",
-    title: {
-      en: "Transparent Documentation",
-      ml: "സുതാര്യമായ രേഖാ പരിശോധന",
-    },
-    description: {
-      en: "Clear scope definitions, milestone reporting, and plain-language legal advisories ensure clients make informed commercial and residential decisions.",
-      ml: "വ്യക്തമായ കരാർ വ്യവസ്ഥകളും കൃത്യമായ ഘട്ടംഘട്ടമായുള്ള വിവര കൈമാറ്റവും വഴി ഇടപാടുകാർക്ക് ആത്മവിശ്വാസത്തോടെ തീരുമാനങ്ങളെടുക്കാൻ സാധിക്കുന്നു.",
-    },
-    principleTag: {
-      en: "CLARITY AT EVERY STAGE",
-      ml: "എല്ലാ ഘട്ടത്തിലും വ്യക്തത",
-    },
-  },
-  {
-    id: "value-05",
-    number: "05",
-    iconName: "globe",
-    title: {
-      en: "Cross-Cultural & Local Fluency",
-      ml: "ആഗോള കാഴ്ചപ്പാടും പ്രാദേശിക പരിചയവും",
-    },
-    description: {
-      en: "We pair international corporate standards with deep regional administrative knowledge to smooth every local registration and neighborhood transition.",
-      ml: "അന്താരാഷ്ട്ര നിലവാരമുള്ള സേവന ശൈലിയും പ്രാദേശിക ഭരണ-നിയമ സംവിധാനങ്ങളെക്കുറിച്ചുള്ള ആഴത്തിലുള്ള അറിവും സംയോജിപ്പിച്ച് പ്രവർത്തിക്കുന്നു.",
-    },
-    principleTag: {
-      en: "GLOBAL STANDARDS, LOCAL INSIGHT",
-      ml: "ആഗോള നിലവാരം, പ്രാദേശിക വൈദഗ്ധ്യം",
-    },
-  },
-  {
-    id: "value-06",
-    number: "06",
-    iconName: "handshake",
-    title: {
-      en: "Enduring Client Advocacy",
-      ml: "ദീർഘകാല സേവന പങ്കാളിത്തം",
-    },
-    description: {
-      en: "Our engagement extends beyond initial arrival or incorporation—supporting ongoing compliance, lease renewals, and long-term asset protection.",
-      ml: "പ്രാരംഭ രജിസ്ട്രേഷനോ താമസമാറ്റത്തിനോ അപ്പുറം, തുടർന്നുണ്ടാകുന്ന നിയമ-കംപ്ലയൻസ് ആവശ്യങ്ങളിലും ദീർഘകാല പങ്കാളിയായി LRS ഒപ്പമുണ്ടാകുന്നു.",
-    },
-    principleTag: {
-      en: "LONG-TERM ADVISORY PARTNERSHIP",
-      ml: "തുടർച്ചയായ നിയമ-റീലൊക്കേഷൻ പിന്തുണ",
-    },
-  },
+
 ];
 
 export const PARTNER_SLOTS_DATA: PartnerSlotItem[] = [

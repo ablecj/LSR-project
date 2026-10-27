@@ -3,12 +3,14 @@ import { ContactPageTranslations, ContactServiceKey } from "@/data/translations"
 import { Locale } from "@/data/siteContent";
 
 export const CONTACT_SERVICE_KEYS: ContactServiceKey[] = [
-  "mprp",
   "citizenship-by-merit",
-  "mrp",
+  "mprp",
+  "digital-nomad-visa",
+  "startup-residence",
   "grp",
-  "corporate-relocation",
-  "real-estate-tenancy",
+  "trp",
+  "real-estate",
+  "education",
   "general-inquiry",
 ];
 

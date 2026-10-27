@@ -97,11 +97,11 @@ export function OurValuesSection() {
                 </div>
 
                 {/* Principle Tag Footer */}
-                <div className="pt-4 border-t border-brand-border">
+                {/* <div className="pt-4 border-t border-brand-border">
                   <span className="text-[11px] font-mono uppercase tracking-widest text-brand-primary">
                     {item.principleTag[locale]}
                   </span>
-                </div>
+                </div> */}
               </article>
             );
           })}

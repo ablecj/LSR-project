@@ -220,11 +220,11 @@ export function TeamSection() {
                         className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       />
 
-                      {member.isSampleProfile && (
+                      {/* {member.isSampleProfile && (
                         <div className="absolute left-3 top-3 bg-brand-primary-deep/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-white">
                           {t.team.sampleBadge}
                         </div>
-                      )}
+                      )} */}
                     </div>
 
                     {/* Team Details */}
