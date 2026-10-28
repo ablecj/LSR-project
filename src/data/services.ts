@@ -34,7 +34,7 @@ export interface ServiceFAQItem {
 
 export interface ServiceData {
   id: string;
-  code: string;
+  // code: string;
   slug: string;
   officialName: string;
   abbreviation?: string;
@@ -93,7 +93,7 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
   // 1. Maltese Citizenship by Merit
   {
     id: "citizenship-by-merit",
-    code: "01",
+    // code: "01",
     slug: "citizenship-by-merit",
     officialName: "The Maltese Citizenship by Merit",
     abbreviation: "MCM",
@@ -113,8 +113,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       en: "The Malta Citizenship by Merit framework was introduced in July 2025 through Legal Notice 159 of 2025, which amended the Maltese Citizenship Act (Cap. 188) to establish the Granting of Citizenship by Naturalisation on the Basis of Merit Regulations.",
       ml: "മാൾട്ടീസ് പൗരത്വ നിയമം (Cap. 188) ഭേദഗതി ചെയ്തുകൊണ്ട് 2025 ജൂലൈയിൽ ലീഗൽ നോട്ടീസ് 159 ഓഫ് 2025 (Legal Notice 159 of 2025) വഴിയാണ് മെറിറ്റ് അടിസ്ഥാനത്തിൽ പൗരത്വം നൽകുന്നതിനുള്ള പുതിയ ചട്ടക്കൂട് (Granting of Citizenship by Naturalisation on the Basis of Merit Regulations) നിലവിൽ വന്നത്.",
     },
-    image: "/images/service-immigration.jpg",
-    secondaryImage: "/images/hero-3.jpg",
+    image: "/images/service-img/service-1.webp",
+    secondaryImage: "/images/service-1-sec.webp",
     imageAlt: {
       en: "Legal portfolio and consular documentation representing The Maltese Citizenship by Merit",
       ml: "മെറിറ്റ് അടിസ്ഥാനത്തിലുള്ള മാൾട്ടീസ് പൗരത്വത്തെ സൂചിപ്പിക്കുന്ന ലീഗൽ പോർട്ട്ഫോളിയോ",
@@ -163,8 +163,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       },
     ],
     eligibilitySectionLabel: {
-      en: "03 / MERIT PRINCIPLES & QUALIFYING FIELDS",
-      ml: "03 / മെറിറ്റ് മാനദണ്ഡങ്ങളും യോഗ്യതാ മേഖലകളും",
+      en: " MERIT PRINCIPLES & QUALIFYING FIELDS",
+      ml: "മെറിറ്റ് മാനദണ്ഡങ്ങളും യോഗ്യതാ മേഖലകളും",
     },
     eligibilityHeadline: {
       en: "Merit Regulations & Extraordinary Contribution Fields",
@@ -273,8 +273,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       },
     ],
     processSectionLabel: {
-      en: "04 / JURISDICTION ADVANTAGES",
-      ml: "04 / മാൾട്ടയുടെ സവിശേഷതകൾ",
+      en: "JURISDICTION ADVANTAGES",
+      ml: " മാൾട്ടയുടെ സവിശേഷതകൾ",
     },
     processHeadline: {
       en: "Why Choose Malta?",
@@ -352,7 +352,7 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
   // 2. Malta Permanent Residence Programme
   {
     id: "malta-permanent-residence",
-    code: "02",
+    // code: "02",
     slug: "malta-permanent-residence",
     officialName: "Malta Permanent Residence Programme",
     abbreviation: "MPRP",
@@ -372,8 +372,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       en: "When considering countries for second residency, families have a number of core priorities. They look for a safe and stable jurisdiction, a good quality of life, educational opportunities for their children, access to healthcare and business prospects. Malta is an attractive proposition for those wishing to settle on the Islands.",
       ml: "രണ്ടാമതൊരു താമസാനുമതിക്കായി രാജ്യങ്ങൾ പരിഗണിക്കുമ്പോൾ കുടുംബങ്ങൾക്ക് നിരവധി പ്രധാന മുൻഗണനകളുണ്ട്. സുരക്ഷിതവും സ്ഥിരതയുള്ളതുമായ നിയമവ്യവസ്ഥ, മികച്ച ജീവിതനിലവാരം, കുട്ടികൾക്കുള്ള വിദ്യാഭ്യാസ അവസരങ്ങൾ, ആരോഗ്യ സംരക്ഷണം, ബിസിനസ് സാധ്യതകൾ എന്നിവ അവർ തേടുന്നു. ഈ ദ്വീപുകളിൽ സ്ഥിരതാമസമാക്കാൻ ആഗ്രഹിക്കുന്നവർക്ക് മാൾട്ട മികച്ചൊരു തിരഞ്ഞെടുപ്പാണ്.",
     },
-    image: "/images/service-realestate.jpg",
-    secondaryImage: "/images/hero-2.jpg",
+    image: "/images/service-img/service-2.webp",
+    secondaryImage: "/images/service-2-sec.webp",
     imageAlt: {
       en: "Mediterranean residential architecture representing the Malta Permanent Residence Programme",
       ml: "മാൾട്ട പെർമനന്റ് റസിഡൻസ് പ്രോഗ്രാം പ്രതിനിധീകരിക്കുന്ന ഭവന ദൃശ്യം",
@@ -506,8 +506,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       },
     ],
     processSectionLabel: {
-      en: "04 / JURISDICTION ADVANTAGES",
-      ml: "04 / മാൾട്ടയുടെ സവിശേഷതകൾ",
+      en: " JURISDICTION ADVANTAGES",
+      ml: " മാൾട്ടയുടെ സവിശേഷതകൾ",
     },
     processHeadline: {
       en: "Why choose Malta?",
@@ -589,7 +589,7 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
   // 3. Malta Digital Nomad Visa
   {
     id: "malta-digital-nomad-visa",
-    code: "03",
+    // code: "03",
     slug: "malta-digital-nomad-visa",
     officialName: "Malta Digital Nomad Visa",
     abbreviation: "NRP",
@@ -609,8 +609,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       en: "Launched in 2021, Malta’s Nomad Residence Permit (NRP) offers third country nationals, who can work remotely, the opportunity to reside in Malta.",
       ml: "2021-ൽ ആരംഭിച്ച മാൾട്ടയുടെ നോമാഡ് റസിഡൻസ് പെർമിറ്റ് (NRP), വിദൂരമായി (Remotely) ജോലി ചെയ്യാൻ കഴിയുന്ന മൂന്നാം രാജ്യ പൗരന്മാർക്ക് മാൾട്ടയിൽ താമസിക്കാനുള്ള അവസരം നൽകുന്നു.",
     },
-    image: "/images/service-relocation.jpg",
-    secondaryImage: "/images/hero-1.jpg",
+    image: "/images/service-img/service-3.webp",
+    secondaryImage: "/images/service-3-sec.webp",
     imageAlt: {
       en: "Mediterranean workspace representing the Malta Digital Nomad Visa (Nomad Residence Permit)",
       ml: "മാൾട്ട ഡിജിറ്റൽ നോമാഡ് വിസയെ പ്രതിനിധീകരിക്കുന്ന ദൃശ്യം",
@@ -725,7 +725,7 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
   // 4. Malta Startup Residence Programme
   {
     id: "malta-startup-residence",
-    code: "04",
+    // code: "04",
     slug: "malta-startup-residence",
     officialName: "Malta Startup Residence Programme",
     abbreviation: "MSRP",
@@ -745,8 +745,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       en: "The incorporated Startup in Malta is required to place a tangible investment and/or paid up share capital of not less than €25,000. In case where more than four (4) co-founders apply for the Startup Residence Permit, an additional €10,000 needs to be placed per additional co-founder. In any case, the maximum number of co-founders eligible for the Startup Residence Programme is six (6).",
       ml: "മാൾട്ടയിൽ രജിസ്റ്റർ ചെയ്യുന്ന സ്റ്റാർട്ടപ്പിന് കുറഞ്ഞത് €25,000 മൂല്യമുള്ള നിക്ഷേപം (Tangible investment) അല്ലെങ്കിൽ പെയ്ഡ്-അപ്പ് ഷെയർ ക്യാപിറ്റൽ ഉണ്ടായിരിക്കണം. നാല് (4) സഹസ്ഥാപകരിൽ കൂടുതൽ പേർ സ്റ്റാർട്ടപ്പ് റസിഡൻസ് പെർമിറ്റിനായി അപേക്ഷിക്കുന്ന സാഹചര്യത്തിൽ, ഓരോ അധിക സഹസ്ഥാപകനും €10,000 വീതം അധികമായി നിക്ഷേപിക്കേണ്ടതാണ്. ഏതൊരു സാഹചര്യത്തിലും ഈ പ്രോഗ്രാമിന് അർഹരായ പരമാവധി സഹസ്ഥാപകരുടെ എണ്ണം ആറ് (6) ആണ്.",
     },
-    image: "/images/service-corporate.jpg",
-    secondaryImage: "/images/hero-3.jpg",
+    image: "/images/service-img/service-4.webp",
+    secondaryImage: "/images/service-4-sec.webp",
     imageAlt: {
       en: "Modern corporate atrium representing the Malta Startup Residence Programme",
       ml: "മാൾട്ട സ്റ്റാർട്ടപ്പ് റസിഡൻസ് പ്രോഗ്രാമിനെ പ്രതിനിധീകരിക്കുന്ന വാണിജ്യ ദൃശ്യം",
@@ -869,7 +869,7 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
   // 5. Global Residence Programme
   {
     id: "global-residence-programme",
-    code: "05",
+    // code: "05",
     slug: "global-residence-programme",
     officialName: "Global Residence Programme",
     abbreviation: "GRP",
@@ -889,8 +889,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       en: "Global Residence Programme offers a special tax status to qualifying applicants.",
       ml: "യോഗ്യരായ അപേക്ഷകർക്ക് ഗ്ലോബൽ റസിഡൻസ് പ്രോഗ്രാം പ്രത്യേക നികുതി പദവി (Special tax status) വാഗ്ദാനം ചെയ്യുന്നു.",
     },
-    image: "/images/hero-1.jpg",
-    secondaryImage: "/images/about-editorial.jpg",
+    image: "/images/service-img/service-5.webp",
+    secondaryImage: "/images/service-5-sec.webp",
     imageAlt: {
       en: "International architectural atrium representing the Global Residence Programme",
       ml: "ഗ്ലോബൽ റസിഡൻസ് പ്രോഗ്രാമിനെ സൂചിപ്പിക്കുന്ന അന്താരാഷ്ട്ര വാസ്തുവിദ്യാ ദൃശ്യം",
@@ -1075,7 +1075,7 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
   // 6. The Residence Programme
   {
     id: "the-residence-programme",
-    code: "06",
+    // code: "06",
     slug: "the-residence-programme",
     officialName: "The Residence Programme",
     abbreviation: "TRP",
@@ -1095,8 +1095,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       en: "Applicants may qualify for paying only 15% of your external income remitted to Malta under The Residence Programme.",
       ml: "ദി റസിഡൻസ് പ്രോഗ്രാമിന് കീഴിൽ മാൾട്ടയിലേക്ക് അയയ്ക്കുന്ന വിദേശ വരുമാനത്തിന് 15% മാത്രം നികുതി നൽകാനുള്ള അർഹത അപേക്ഷകർക്ക് ലഭിക്കുന്നു.",
     },
-    image: "/images/hero-2.jpg",
-    secondaryImage: "/images/hero-1.jpg",
+    image: "/images/service-img/service-6.webp",
+    secondaryImage: "/images/service-6-sec.webp",
     imageAlt: {
       en: "Coastal Mediterranean residence representing The Residence Programme in Malta",
       ml: "ദി റസിഡൻസ് പ്രോഗ്രാമിനെ പ്രതിനിധീകരിക്കുന്ന മാൾട്ടയിലെ ഭവന ദൃശ്യം",
@@ -1281,7 +1281,7 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
   // 7. Real Estate
   {
     id: "real-estate",
-    code: "07",
+    // code: "07",
     slug: "real-estate",
     officialName: "Real Estate",
     abbreviation: "REAL ESTATE",
@@ -1301,8 +1301,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       en: "We understand that choosing a property is a big decision. Whether you are looking for an investment property, or a rental in Malta, our real estate expert will help you through every step of the process and find the perfect property for your needs.",
       ml: "ഒരു വസ്തു തിരഞ്ഞെടുക്കുക എന്നത് വലിയൊരു തീരുമാനമാണെന്ന് ഞങ്ങൾ മനസ്സിലാക്കുന്നു. നിങ്ങൾ മാൾട്ടയിൽ ഒരു നിക്ഷേപ വസ്തുവോ വാടക വീടോ ആണ് തിരയുന്നതെങ്കിൽ, പ്രക്രിയയുടെ ഓരോ ഘട്ടത്തിലും ഞങ്ങളുടെ റിയൽ എസ്റ്റേറ്റ് വിദഗ്ധർ നിങ്ങളെ സഹായിക്കുകയും നിങ്ങളുടെ ആവശ്യങ്ങൾക്ക് ഏറ്റവും അനുയോജ്യമായ പ്രോപ്പർട്ടി കണ്ടെത്തുകയും ചെയ്യും.",
     },
-    image: "/images/service-realestate.jpg",
-    secondaryImage: "/images/hero-2.jpg",
+    image: "/images/service-img/service-7.webp",
+    secondaryImage: "/images/service-7-sec.webp",
     imageAlt: {
       en: "Luxury Mediterranean real estate and property investment in Malta",
       ml: "മാൾട്ടയിലെ റിയൽ എസ്റ്റേറ്റ് നിക്ഷേപത്തെയും ഭവനങ്ങളെയും സൂചിപ്പിക്കുന്ന ദൃശ്യം",
@@ -1403,7 +1403,7 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
   // 8. Education
   {
     id: "education",
-    code: "08",
+    // code: "08",
     slug: "education",
     officialName: "Education",
     abbreviation: "EDUCATION",
@@ -1423,8 +1423,8 @@ export const MALTA_SERVICES_DATA: ServiceData[] = [
       en: "Finding the right school for your child is one of the major concerns for many international families when relocating to Malta/Europe. Assisted by LRS expert, you can be confident to find a wide range schools top choose from and finally pick the right one.",
       ml: "മാൾട്ടയിലേക്കോ യൂറോപ്പിലേക്കോ താമസം മാറുമ്പോൾ അന്താരാഷ്ട്ര കുടുംബങ്ങൾ നേരിടുന്ന പ്രധാന ആശങ്കകളിലൊന്നാണ് കുട്ടികൾക്ക് അനുയോജ്യമായ സ്കൂൾ കണ്ടെത്തുക എന്നത്. LRS വിദഗ്ധരുടെ സഹായത്തോടെ, മികച്ച നിരവധി സ്കൂളുകളിൽ നിന്ന് നിങ്ങളുടെ കുട്ടികൾക്ക് ഏറ്റവും അനുയോജ്യമായ ഒന്ന് ആത്മവിശ്വാസത്തോടെ തിരഞ്ഞെടുക്കാം.",
     },
-    image: "/images/about-editorial.jpg",
-    secondaryImage: "/images/hero-3.jpg",
+    image: "/images/service-img/service-8.webp",
+    secondaryImage: "/images/service-8-sec.webp",
     imageAlt: {
       en: "Educational consultancy and school admission support in Malta by LRS",
       ml: "മാൾട്ടയിലെ വിദ്യാഭ്യാസ കൺസൾട്ടൻസി സേവനങ്ങളെ പ്രതിനിധീകരിക്കുന്ന ദൃശ്യം",

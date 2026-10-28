@@ -491,9 +491,9 @@ export function ServiceContent({ service }: ServiceContentProps) {
           <aside className="lg:col-span-4 lg:sticky lg:top-28 space-y-6">
             {/* Primary Consultation Card */}
             <div className="bg-brand-primary-deep text-white p-7 sm:p-8 border border-brand-primary-deep shadow-elevated">
-              <span className="inline-block text-[10px] font-mono uppercase tracking-[0.2em] bg-white/10 text-brand-secondary px-2.5 py-1 mb-4">
+              {/* <span className="inline-block text-[10px] font-mono uppercase tracking-[0.2em] bg-white/10 text-brand-secondary px-2.5 py-1 mb-4">
                 {service.code} • {service.abbreviation || "MALTA"}
-              </span>
+              </span> */}
 
               <h3 className="font-display text-2xl text-white leading-snug mb-3">
                 {t.servicesPage.detail.sidebarCardTitle}
@@ -560,9 +560,9 @@ export function ServiceContent({ service }: ServiceContentProps) {
                         }`}
                       >
                         <span className="truncate">
-                          <span className="font-mono text-brand-secondary mr-2">
+                          {/* <span className="font-mono text-brand-secondary mr-2">
                             {item.code}
-                          </span>
+                          </span> */}
                           {item.title[locale]}
                         </span>
                         <ArrowUpRight className="w-3.5 h-3.5 shrink-0 text-brand-secondary" />

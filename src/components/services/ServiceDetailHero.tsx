@@ -138,12 +138,12 @@ export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
               <li aria-hidden="true">
                 <ChevronRight className="w-3.5 h-3.5 text-brand-secondary" />
               </li>
-              <li
+              {/* <li
                 aria-current="page"
                 className="text-brand-secondary font-semibold"
               >
                 {service.abbreviation || service.code}
-              </li>
+              </li> */}
             </ol>
           </nav>
 
@@ -163,9 +163,9 @@ export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
               data-detail-hero-eyebrow
               className="inline-flex flex-wrap items-center gap-3 mb-4"
             >
-              <span className="bg-brand-secondary text-white font-mono text-xs font-semibold px-2.5 py-1 tracking-widest">
+              {/* <span className="bg-brand-secondary text-white font-mono text-xs font-semibold px-2.5 py-1 tracking-widest">
                 {service.code}
-              </span>
+              </span> */}
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-secondary">
                 {service.category[locale]}
               </span>

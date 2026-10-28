@@ -80,7 +80,7 @@ export function AboutHero() {
       {/* Background Architectural Image with Subtle Reveal */}
       <div data-about-hero-bg className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-3.jpg"
+          src="/images/hero-3.webp"
           alt={t.aboutPage.hero.title}
           fill
           priority

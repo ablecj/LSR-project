@@ -118,7 +118,7 @@ export function AboutUsSection() {
             <div className="bg-brand-surface-muted p-4 sm:p-6 border border-brand-border shadow-subtle">
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-primary-deep">
                 <Image
-                  src="/images/about-editorial.jpg"
+                  src="/images/about-editorial.webp"
                   alt={t.aboutPage.overview.imageCaptionTitle}
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
@@ -130,7 +130,7 @@ export function AboutUsSection() {
               <div className="grid grid-cols-12 gap-4 mt-4 items-center">
                 <div className="col-span-5 relative aspect-[4/3] overflow-hidden border border-brand-border bg-brand-primary-deep">
                   <Image
-                    src="/images/service-immigration.jpg"
+                    src="/images/service-immigration.webp"
                     alt="LRS Legal Portfolio & Compass"
                     fill
                     sizes="(max-width: 1024px) 40vw, 18vw"

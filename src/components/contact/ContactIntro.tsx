@@ -188,23 +188,23 @@ export function ContactIntro() {
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-primary-deep">
                 <div data-contact-intro-image className="relative w-full h-full">
                   <Image
-                    src="/images/about-editorial.jpg"
+                    src="/images/contact-intro.webp"
                     alt={intro.imageAlt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover object-center hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                <div className="absolute top-3 left-3 bg-brand-primary-deep/90 text-white text-[10px] font-mono uppercase tracking-[0.18em] px-3 py-1.5 border border-white/15">
+                {/* <div className="absolute top-3 left-3 bg-brand-primary-deep/90 text-white text-[10px] font-mono uppercase tracking-[0.18em] px-3 py-1.5 border border-white/15">
                   {intro.imageCaptionBadge}
-                </div>
+                </div> */}
               </div>
 
               {/* Secondary Detail Frame */}
               <div className="grid grid-cols-12 gap-4 mt-4 items-center">
                 <div className="col-span-5 relative aspect-[4/3] overflow-hidden border border-brand-border bg-brand-primary-deep">
                   <Image
-                    src="/images/service-immigration.jpg"
+                    src="/images/contact-img-sec.webp"
                     alt={intro.secondaryImageAlt}
                     fill
                     sizes="(max-width: 1024px) 40vw, 18vw"

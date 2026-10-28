@@ -101,7 +101,7 @@ export function AboutSection() {
             <div className="relative bg-brand-surface-muted p-4 sm:p-6 border border-brand-border">
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-primary-deep">
                 <Image
-                  src="/images/about-editorial.jpg"
+                  src="/images/about-editorial.webp"
                   alt={t.about.imageCaptionTitle}
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"

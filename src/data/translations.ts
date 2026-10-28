@@ -170,7 +170,7 @@ export interface ContactPageTranslations {
     hoursValue: string;
     imageAlt: string;
     secondaryImageAlt: string;
-    imageCaptionBadge: string;
+    // imageCaptionBadge: string;
     imageCaptionTitle: string;
     imageCaptionSubtitle: string;
     secondaryFrameLabel: string;
@@ -615,7 +615,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         officialCodePrefix: "PROGRAMME",
       },
       cta: {
-        sectionLabel: "03 / NEXT STEP & CONFIDENTIAL CONSULTATION",
+        sectionLabel: " NEXT STEP & CONFIDENTIAL CONSULTATION",
         headline: "Begin a Tailored Programme Assessment with LRS.",
         description:
           "Connect with our Valletta advisory team to discuss which Maltese residency, retirement, tax, or merit citizenship framework aligns with your personal and financial profile.",
@@ -631,13 +631,13 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         backToServices: "All Malta Programmes",
         officialProgrammeLabel: "Official Programme Designation",
         editorialIntroLabel: "LRS Advisory Introduction",
-        overviewSectionLabel: "01 / PROGRAMME OVERVIEW",
+        overviewSectionLabel: "PROGRAMME OVERVIEW",
         overviewHeadline: "Statutory Scope & Structure",
-        highlightsSectionLabel: "02 / KEY INFORMATION & HIGHLIGHTS",
+        highlightsSectionLabel: "KEY INFORMATION & HIGHLIGHTS",
         highlightsHeadline: "At-a-Glance Programme Parameters",
-        eligibilitySectionLabel: "03 / ELIGIBILITY & STATUTORY CONDITIONS",
+        eligibilitySectionLabel: " ELIGIBILITY & STATUTORY CONDITIONS",
         eligibilityHeadline: "Verified Eligibility & Programme Requirements",
-        processSectionLabel: "04 / APPLICATION & EVALUATION PROCESS",
+        processSectionLabel: " APPLICATION & EVALUATION PROCESS",
         processHeadline: "Four-Stage Statutory Progression",
         profilesSectionLabel: "ELIGIBLE CANDIDATE PROFILES",
         profilesHeadline: "Recognized Fields of Merit Under Article 10(9)",
@@ -693,7 +693,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
           "LRS Legal & Relocation Services private consultation suite and editorial interior",
         secondaryImageAlt:
           "Bespoke legal portfolio and compass representing cross-border statutory precision",
-        imageCaptionBadge: "VALLETTA CHAMBERS • MALTA",
+        // imageCaptionBadge: "VALLETTA CHAMBERS • MALTA",
         imageCaptionTitle: "LRS Principal Advisory Desk",
         imageCaptionSubtitle: "32A Scots House, South Street, Valletta, VLT1101, Malta",
         secondaryFrameLabel: "SINGLE-WINDOW STEWARDSHIP",
@@ -846,7 +846,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       scrollIndicator: "താഴേക്ക് സ്ക്രോൾ ചെയ്യുക",
     },
     about: {
-      sectionLabel: "01 / LRS-നെ പരിചയപ്പെടാം",
+      sectionLabel: " LRS-നെ പരിചയപ്പെടാം",
       headline: "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡിനെക്കുറിച്ച്",
       leadParagraph:
         "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡ് ആഗോളതലത്തിലുള്ള താമസ-കുടിയേറ്റ സൗകര്യങ്ങൾ, അന്താരാഷ്ട്ര നിക്ഷേപ അവസരങ്ങൾ, രാജ്യാതിർത്തികൾക്കപ്പുറമുള്ള ജീവിതശൈലി ആസൂത്രണം എന്നിവയിൽ വൈദഗ്ധ്യം നേടിയ പ്രൊഫഷണൽ കൺസൾട്ടന്റുമാരുടെ ഒരു സംഘമാണ്. 2016-ൽ മാൾട്ടയുടെ നിക്ഷേപത്തിലൂടെയുള്ള താമസാനുമതി, പൗരത്വ പദ്ധതികൾ ആരംഭിച്ചതു മുതൽ ഈ മേഖലയിൽ സജീവമായി പ്രവർത്തിച്ചുവരുന്ന ഡോ. അലക്സെയ് ഡാല്ലിയാണ് ഈ സ്ഥാപനത്തിന് നേതൃത്വം നൽകുന്നത്.",
@@ -876,7 +876,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       ctaLabel: "സേവനങ്ങളെക്കുറിച്ച് സംസാരിക്കാം",
     },
     services: {
-      sectionLabel: "02 / പ്രധാന സേവന മേഖലകൾ",
+      sectionLabel: " പ്രധാന സേവന മേഖലകൾ",
       headline: "നിയമ-റീലൊക്കേഷൻ രംഗത്തെ സമഗ്ര സേവനങ്ങൾ.",
       description:
         "എൽആർഎസ് ഗ്ലോബൽ ലിമിറ്റഡ്മാൾട്ടയിലും മറ്റ് രാജ്യങ്ങളിലുമായി പുതിയ അവസരങ്ങൾ തേടുന്ന വ്യക്തികൾക്കും കുടുംബങ്ങൾക്കും സംരംഭകർക്കും നിക്ഷേപകർക്കും അനുയോജ്യമായ മാർഗനിർദേശങ്ങൾ നൽകുന്നു. മാൾട്ടീസ് പൗരത്വവുമായി ബന്ധപ്പെട്ട ഉപദേശങ്ങൾ, Malta Permanent Residence Programme, Digital Nomad Residence Permit, Startup Residence Programme, Global Residence Programme, The Residence Programme തുടങ്ങിയവയിലൂടെ, നിങ്ങളുടെ ലക്ഷ്യങ്ങൾക്കും യോഗ്യതകൾക്കും അനുയോജ്യമായ കുടിയേറ്റ-താമസ മാർഗങ്ങൾ കണ്ടെത്താൻ പ്രൊഫഷണൽ പിന്തുണ നൽകുന്നു. കൂടാതെ, അന്താരാഷ്ട്ര വിദ്യാഭ്യാസ അവസരങ്ങൾ കണ്ടെത്തുന്നതിനും ആത്മവിശ്വാസത്തോടെ ഭാവി ആസൂത്രണം ചെയ്യുന്നതിനും സഹായിക്കുന്ന വിദ്യാഭ്യാസ കൺസൾട്ടൻസി സേവനങ്ങളും ഞങ്ങൾ നൽകുന്നു.",
@@ -887,7 +887,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
       nextLabel: "അടുത്ത സേവനം",
     },
     team: {
-      sectionLabel: "03 / ഉപദേശക സമിതി",
+      sectionLabel: " ഉപദേശക സമിതി",
       headline: "പരിചയസമ്പന്നരായ നിയമ-റീലൊക്കേഷൻ വിദഗ്ധർ.",
       description:
         "നിയമ രംഗത്തെയും അന്താരാഷ്ട്ര റീലൊക്കേഷൻ മേഖലയിലെയും വിദഗ്ധരുടെ കൂട്ടായ്മ.",
@@ -896,7 +896,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         "ശ്രദ്ധിക്കുക: യഥാർത്ഥ വ്യക്തികളുടെ വിവരങ്ങൾ ചേർക്കുന്നതുവരെ ഡിസൈൻ വ്യക്തമാക്കുന്നതിനായി നൽകിയിട്ടുള്ള മാതൃകാ പ്രൊഫൈലുകളാണ് (Sample Placeholders) താഴെ കാണുന്നത്.",
     },
     contact: {
-      sectionLabel: "04 / ഞങ്ങളുമായി ബന്ധപ്പെടുക",
+      sectionLabel: " ഞങ്ങളുമായി ബന്ധപ്പെടുക",
       headline: "നിങ്ങളുടെ ആവശ്യങ്ങൾ LRS ടീമുമായി പങ്കുവെക്കുക.",
       description:
         "മാൾട്ട റസിഡൻസി, ടാക്സ് പ്രോഗ്രാമുകൾ അല്ലെങ്കിൽ റീലൊക്കേഷൻ സംബന്ധമായ ആവശ്യങ്ങൾ താഴെ രേഖപ്പെടുത്താം.",
@@ -1028,7 +1028,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         bottomCtaButton: "കൺസൾട്ടേഷൻ സമയം തിരഞ്ഞെടുക്കുക",
       },
       partners: {
-        sectionLabel: "05 / ഞങ്ങളുടെ പങ്കാളികളും ശൃംഖലയും",
+        sectionLabel: "ഞങ്ങളുടെ പങ്കാളികളും ശൃംഖലയും",
         headline: "നിയമ-റീലൊക്കേഷൻ മേഖലകളിലെ സഹകരണ ശൃംഖല.",
         description:
           "അംഗീകൃത ലീഗൽ ചേംബറുകൾ, പ്രോപ്പർട്ടി കൺസൾട്ടന്റുമാർ, ഗ്ലോബൽ മൊബിലിറ്റി നെറ്റ്‌വർക്കുകൾ എന്നിവയുമായി സഹകരിച്ചാണ് LRS പ്രവർത്തിക്കുന്നത്. നിങ്ങളുടെ ഔദ്യോഗിക പങ്കാളികളുടെ ലോഗോകൾ ചേർക്കുന്നതിനായി താഴെ കാണുന്ന സ്ലൈഡർ ക്രമീകരിച്ചിരിക്കുന്നു.",
@@ -1082,7 +1082,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         officialCodePrefix: "പ്രോഗ്രാം",
       },
       cta: {
-        sectionLabel: "03 / അടുത്ത ഘട്ടം • കൺസൾട്ടേഷൻ",
+        sectionLabel: " അടുത്ത ഘട്ടം • കൺസൾട്ടേഷൻ",
         headline: "നിങ്ങൾക്ക് അനുയോജ്യമായ മാൾട്ട പ്രോഗ്രാം തിരഞ്ഞെടുക്കാൻ LRS-മായി സംസാരിക്കാം.",
         description:
           "MPRP വസ്തു നിക്ഷേപം, MRP പെൻഷൻ നികുതി വ്യവസ്ഥകൾ, ഗ്ലോബൽ റസിഡൻസ് പ്രോഗ്രാം, അല്ലെങ്കിൽ മെറിറ്റ് അധിഷ്ഠിത പൗരത്വം എന്നിവയിൽ നിങ്ങളുടെ യോഗ്യത പരിശോധിക്കാൻ ഞങ്ങളുടെ വലേറ്റ അഡ്വൈസറി ഡെസ്കുമായി ബന്ധപ്പെടുക.",
@@ -1098,13 +1098,13 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
         backToServices: "എല്ലാ മാൾട്ട പ്രോഗ്രാമുകളും",
         officialProgrammeLabel: "ഔദ്യോഗിക പ്രോഗ്രാം നാമം",
         editorialIntroLabel: "LRS ആമുഖ വിവരണം",
-        overviewSectionLabel: "01 / പ്രോഗ്രാം അവലോകനം",
+        overviewSectionLabel: "പ്രോഗ്രാം അവലോകനം",
         overviewHeadline: "പ്രോഗ്രാമിന്റെ ഘടനയും ലക്ഷ്യവും",
-        highlightsSectionLabel: "02 / പ്രധാന വിവരങ്ങളും സവിശേഷതകളും",
+        highlightsSectionLabel: "പ്രധാന വിവരങ്ങളും സവിശേഷതകളും",
         highlightsHeadline: "പ്രധാന പ്രോഗ്രാം മാനദണ്ഡങ്ങൾ ഒറ്റനോട്ടത്തിൽ",
-        eligibilitySectionLabel: "03 / യോഗ്യതാ മാനദണ്ഡങ്ങളും നിബന്ധനകളും",
+        eligibilitySectionLabel: "യോഗ്യതാ മാനദണ്ഡങ്ങളും നിബന്ധനകളും",
         eligibilityHeadline: "അപേക്ഷക യോഗ്യതയും പ്രോഗ്രാം വ്യവസ്ഥകളും",
-        processSectionLabel: "04 / അപേക്ഷാ-പരിശോധനാ ഘട്ടങ്ങൾ",
+        processSectionLabel: "അപേക്ഷാ-പരിശോധനാ ഘട്ടങ്ങൾ",
         processHeadline: "നാല് ഘട്ടങ്ങളുള്ള ഔദ്യോഗിക നടപടിക്രമം",
         profilesSectionLabel: "അർഹരായ പ്രൊഫൈലുകൾ (ELIGIBLE PROFILES)",
         profilesHeadline: "ആർട്ടിക്കിൾ 10(9) പ്രകാരം പരിഗണിക്കപ്പെടുന്ന മേഖലകൾ",
@@ -1160,7 +1160,7 @@ export const TRANSLATIONS: Record<Locale, TranslationDictionary> = {
           "LRS ലീഗൽ & റീലൊക്കേഷൻ സർവീസസ് കൺസൾട്ടേഷൻ ചേംബർ ഇന്റീരിയർ",
         secondaryImageAlt:
           "നിയമപരമായ കൃത്യതയെ സൂചിപ്പിക്കുന്ന ലീഗൽ പോർട്ട്ഫോളിയോയും കോമ്പസും",
-        imageCaptionBadge: "വലേറ്റ ചേംബർ • മാൾട്ട",
+        // imageCaptionBadge: "വലേറ്റ ചേംബർ • മാൾട്ട",
         imageCaptionTitle: "LRS പ്രിൻസിപ്പൽ അഡ്വൈസറി ഡെസ്ക്",
         imageCaptionSubtitle: "32A Scots House, South Street, Valletta, VLT1101, Malta",
         secondaryFrameLabel: "ഏകീകൃത സേവന ഉത്തരവാദിത്തം",

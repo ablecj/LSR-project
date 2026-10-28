@@ -220,9 +220,9 @@ export function ServicesCarousel() {
                         onLoad={() => equalizeSlideHeights()}
                         className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                       />
-                      <div className="absolute top-3 left-3 bg-brand-primary-deep/90 text-white text-[11px] font-mono px-2.5 py-1 tracking-widest">
+                      {/* <div className="absolute top-3 left-3 bg-brand-primary-deep/90 text-white text-[11px] font-mono px-2.5 py-1 tracking-widest">
                         {service.code}
-                      </div>
+                      </div> */}
                     </Link>
 
                     {/* Service Body */}

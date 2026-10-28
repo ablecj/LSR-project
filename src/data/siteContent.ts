@@ -44,7 +44,7 @@ export interface TeamMember {
 export const HERO_SLIDES: HeroSlide[] = [
   {
     id: "slide-01",
-    image: "/images/hero-1.jpg",
+    image: "/images/banner-img/banner-1.webp",
     imageAlt: {
       en: "Sunlit international corporate headquarters atrium with travertine and deep petrol steel architecture",
       ml: "അന്താരാഷ്ട്ര കോർപ്പറേറ്റ് ആസ്ഥാനത്തിന്റെ മനോഹരമായ ആട്രിയം ദൃശ്യം",
@@ -80,7 +80,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "slide-02",
-    image: "/images/hero-2.jpg",
+    image: "/images/banner-img/banner-2.webp",
     imageAlt: {
       en: "Modern coastal residence at golden hour representing seamless executive relocation",
       ml: "എക്സിക്യൂട്ടീവ് റീലൊക്കേഷൻ പ്രതിനിധീകരിക്കുന്ന ആധുനിക വസതി",
@@ -117,7 +117,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "slide-03",
-    image: "/images/hero-3.jpg",
+    image: "/images/banner-img/banner-3.webp",
     imageAlt: {
       en: "Refined contemporary legal advisory boardroom with warm walnut table and natural light",
       ml: "ആധുനിക ലീഗൽ അഡ്വൈസറി ബോർഡ്റൂം",
