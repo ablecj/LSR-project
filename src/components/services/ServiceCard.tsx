@@ -52,9 +52,9 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
 
             {/* Top Left Number & Code Badge */}
             <div className="absolute top-5 left-5 flex items-center gap-2.5 z-10">
-              <span className="bg-brand-primary-deep/95 text-white font-mono text-xs font-semibold px-3 py-1.5 tracking-[0.2em] border border-white/15">
+              {/* <span className="bg-brand-primary-deep/95 text-white font-mono text-xs font-semibold px-3 py-1.5 tracking-[0.2em] border border-white/15">
                 {service.code}
-              </span>
+              </span> */}
               {service.abbreviation && (
                 <span className="bg-brand-secondary text-white font-mono text-[11px] font-semibold uppercase px-2.5 py-1.5 tracking-widest">
                   {service.abbreviation}
@@ -91,9 +91,9 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
                   {service.category[locale]}
                 </span>
               </div>
-              <span className="font-mono text-xs text-brand-slate">
+              {/* <span className="font-mono text-xs text-brand-slate">
                 / {service.code}
-              </span>
+              </span> */}
             </div>
 
             {/* Service Title */}
